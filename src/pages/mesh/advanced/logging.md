@@ -64,10 +64,6 @@ aio api-mesh:log-get-bulk --past 30 --filename mesh_logs.csv
 
 ## Log forwarding
 
-<InlineAlert variant="warning" slots="text"/>
-
-Log forwarding is an experimental feature and may not function as expected.
-
 Log forwarding allows you to forward logs from API Mesh to a user-owned third-party service.
 
 Using a third-party service allows you to control throttling, log size limits, and log retention policies.
