@@ -112,11 +112,11 @@ To configure a default cache-control directive, add a `cacheControl` key-value p
         "handler": {
           "openapi": {
             "source": "<your_endpoint>"
-          },
-          "responseConfig": {
-            "cache": {
-              "cacheControl": "public, max-age=100"
-            }
+          }
+        },
+        "responseConfig": {
+          "cache": {
+            "cacheControl": "public, max-age=100"
           }
         }
       },
