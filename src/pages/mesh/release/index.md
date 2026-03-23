@@ -36,6 +36,14 @@ aio plugins:uninstall @adobe/aio-cli-plugin-api-mesh
 aio plugins install @adobe/aio-cli-plugin-api-mesh
 ```
 
+## March 23, 2026
+
+This release contains the following changes to API Mesh:
+
+### Bug fixes
+
+- Resolved an issue with [secrets management](../advanced/secrets.md) that could affect secret processing for certain data types.
+
 ## January 07, 2026
 
 This release contains the following changes to API Mesh:
