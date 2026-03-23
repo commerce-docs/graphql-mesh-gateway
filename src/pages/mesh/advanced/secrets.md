@@ -16,6 +16,14 @@ API Mesh for Adobe Developer App Builder allows you to manage secrets for a mesh
 
 For security purposes, you cannot receive the secrets once you define them when creating or updating a mesh. For example, running an `aio api-mesh get` command returns your mesh with the values defined within the mesh configuration file, such as `{context.secrets.SECRET}` and does not return the actual secret's value.
 
+## Secrets limits
+
+API Mesh supports the following limits for secrets management:
+
+- **Maximum number of secrets**: 50 individual secrets per mesh
+- **Maximum size per secret**: 5 KB per individual secret
+- **Supported data types**: string, numeric, boolean, object, and array
+
 ## Create a secrets file
 
 Create a YAML file, such as `secrets.yaml`, to define your secrets. The file name must end with the `yaml` or `yml` file extension. Each line in the files defines a different secret.
@@ -27,16 +35,39 @@ The following example contains a Bash variable as a value for the `TOKEN` secret
 Bash variables are not supported in Windows.
 
 ```yaml
+# String values
 TOKEN: $TOKEN
 USERNAME: user-name
 adminname: 'admin-name'
 AEM_USERNAME: "user-name"
 
+# Bash variables
 API_KEY: ${COMMERCE_API_KEY}
 API_KEY2: $COMMERCE_API_KEY
+
+# Boolean values
+ENABLE_FEATURE: true
+DEBUG_MODE: false
+
+# Numeric values
+MAX_RETRIES: 3
+TIMEOUT: 5000
+
+# Object values
+DATABASE_CONFIG:
+  host: "db.example.com"
+  port: 1234
+  ssl: true
+
+# Array values
+ALLOWED_ORIGINS:
+  - "https://example.com"
+  - "https://app.example.com"
 ```
 
-<InlineAlert variant="warning" slots="text"/>
+<InlineAlert variant="info" slots="text, text"/>
+
+When referencing object properties, use dot notation (`{context.secrets.OBJECT.key}`). Arrays are passed as their full JSON representation.
 
 You must escape a literal `$` character in the secrets file. If the `$` is not part of a Bash variable, escape it with a backslash (`\`): `SECRET: \$SECRET`.
 
@@ -54,24 +85,29 @@ When using secrets with operational headers, use the template literals syntax, f
 
 When using secrets in JavaScript files using hooks or resolvers, use the secret in context, for example, `const secretValue = context.secrets.<SECRET_NAME>`.
 
-The following file provides an example using operational headers:
+The following file provides an example using operational headers with different data types:
 
 ```json
 {
   "meshConfig": {
     "sources": [
       {
-        "name": "Adobe Commerce",
+        "name": "ExampleSource",
         "handler": {
-          "graphql": {
-            "endpoint": "venia.magento.com/graphql",
+          "JsonSchema": {
+            "baseUrl": "https://example.com",
             "operationHeaders": {
-              "secret": "{context.secrets.<secret-name>}"
+              "secret": "{context.secrets.TOKEN}",
+              "api-key": "{context.secrets.API_KEY}",
+              "enable-feature": "{context.secrets.ENABLE_FEATURE}",
+              "max-retries": "{context.secrets.MAX_RETRIES}",
+              "db-host": "{context.secrets.DATABASE_CONFIG.host}",
+              "allowed-origins": "{context.secrets.ALLOWED_ORIGINS}"
             }
           }
         }
       }
-    ],
+    ]
   }
 }
 ```
