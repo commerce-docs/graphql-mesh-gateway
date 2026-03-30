@@ -36,6 +36,14 @@ aio plugins:uninstall @adobe/aio-cli-plugin-api-mesh
 aio plugins install @adobe/aio-cli-plugin-api-mesh
 ```
 
+## March 30, 2026
+
+This release contains the following changes to API Mesh:
+
+### Enhancements
+
+- Added support for `.graphql` files in [`additionalTypeDefs`](../advanced/extend/index.md), allowing you to reference `.graphql` files instead of using inline type definition strings.
+
 ## March 23, 2026
 
 This release contains the following changes to API Mesh:

@@ -47,6 +47,47 @@ For example, if we have the StackExchange API in our Mesh configuration:
 
 We might want to add a new field under the `Query` root type named `viewsInPastMonth`, but we will need a resolver for this field.
 
+### Using `.graphql` files with `additionalTypeDefs`
+
+Instead of providing type definitions as inline strings, you can reference `.graphql` files. This is especially useful when your type definitions are long or complex. When you reference `.graphql` files in `additionalTypeDefs`, they are automatically imported.
+
+```json
+{
+  "sources": [
+    {
+      "name": "StackExchange",
+      "handler": {
+        "openapi": {
+          "source": "https://raw.githubusercontent.com/grokify/api-specs/master/stackexchange/stackexchange-api-v2.2_openapi-v3.0.yaml"
+        }
+      }
+    }
+  ],
+  "additionalTypeDefs": ["./custom-types.graphql"],
+  "additionalResolvers": ["./resolvers.js"]
+}
+```
+
+Where `custom-types.graphql` contains:
+
+```graphql
+extend type Query {
+  listQuestionsFromStackOverflow(first: Int!): [Question]
+}
+```
+
+You can also reference multiple `.graphql` files:
+
+```json
+{
+  "additionalTypeDefs": ["./announcements.graphql", "./cart.graphql"],
+  "additionalResolvers": [
+    "./announcements-resolver.js",
+    "./cart-resolver.js"
+  ]
+}
+```
+
 ## Merging types from different sources (Type Merging)
 
 Imagine you have two different services, `Books` and `Authors`, which are exposing the following schemas:
