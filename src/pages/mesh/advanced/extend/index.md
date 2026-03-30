@@ -49,7 +49,7 @@ We might want to add a new field under the `Query` root type named `viewsInPastM
 
 ### Using `.graphql` files with `additionalTypeDefs`
 
-Instead of providing type definitions as inline strings, you can reference `.graphql` files. This is especially useful when your type definitions are long or complex. When you reference `.graphql` files in `additionalTypeDefs`, they are automatically imported.
+Instead of providing type definitions as inline strings, you can reference `.graphql` files, which is useful when your type definitions are long or complex. When you reference `.graphql` files in `additionalTypeDefs`, they are automatically imported.
 
 ```json
 {
