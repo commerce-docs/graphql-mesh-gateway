@@ -144,7 +144,8 @@ You can confirm that your variables were updated successfully by running the [`a
 
 In addition to [qualifying the `content` of a file manually](../basic/handlers/index.md#reference-local-files-in-handlers), you can directly reference a file in your mesh for automatic conversion. The following restrictions apply:
 
-- Only `JS` and `JSON` file formats are allowed.
+- Only `JS` and `JSON` file formats are allowed for handler sources.
+- `.graphql` files are supported in [`additionalTypeDefs`](./extend/index.md#using-graphql-files-with-additionaltypedefs), the `files` array, and the GraphQL handler's `source` field.
 - The referenced file's path must be less than 25 characters.
 - The referenced file must be in the same directory as the mesh file that references it.
 - The file cannot be in the `~` or `home` directory.
