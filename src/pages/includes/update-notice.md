@@ -1,5 +1,5 @@
 
-<AnnouncementBlock slots="heading, text, button" />
+<Announcement slots="heading, text, button" />
 
 ### Update to the latest CLI version
 

@@ -12,7 +12,7 @@ keywords:
 
 <Fragment src="includes/update-notice.md"/>
 
-<Hero slots="image, heading, text"/>
+<Superhero slots="image, heading, text"/>
 
 ![API Mesh](images/home-bg.jpeg)
 
