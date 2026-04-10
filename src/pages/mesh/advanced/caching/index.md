@@ -25,9 +25,9 @@ API Mesh for Adobe Developer App Builder, uses dynamic content caching, which pr
 If you want to cache API Mesh responses, you have two options:
 
 - [Native caching](#enable-native-caching) - Use API Mesh's native caching feature without having to bring your own CDN
-- [Third-party caching](./fastly.md) - Provide your own third-party CDN, such as Fastly
+- [Third-party caching](fastly.md) - Provide your own third-party CDN, such as Fastly
 
-Regardless of the option you choose, you can configure your [cache-control headers](./cache-control-headers.md) to control how long a response is cached.
+Regardless of the option you choose, you can configure your [cache-control headers](cache-control-headers.md) to control how long a response is cached.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -47,7 +47,7 @@ For API Mesh to cache a response, the request and response must meet the followi
 
 - The response status must be in the range `200` - `299`.
 - The response body cannot contain errors, as defined by [GraphQL specification](https://spec.graphql.org/October2021/#sec-Errors).
-- The response `cache-control` header must contain public [cache eligible directives](./cache-control-headers.md#response-headers).
+- The response `cache-control` header must contain public [cache eligible directives](cache-control-headers.md#response-headers).
 
 ## Compliance
 
@@ -60,7 +60,7 @@ When considering PCI or HIPPA compliance as it relates to caching, you should un
 
 ## Source-driven caching
 
-API Mesh implements a source-driven caching model. Your data sources are responsible for directing caching behavior by returning appropriate [cache-control headers](./cache-control-headers.md).
+API Mesh implements a source-driven caching model. Your data sources are responsible for directing caching behavior by returning appropriate [cache-control headers](cache-control-headers.md).
 
 <InlineAlert variant="warning" slots="text"/>
 
@@ -149,7 +149,7 @@ For more information, refer to the [Command reference](../index.md#aio-api-meshc
 
 ## Use your own CDN
 
-While we recommend using the native [API Mesh caching](./index.md) functionality, you can also provide your own content delivery network (CDN), such as Fastly. Refer to the [Fastly caching example](./fastly.md) for more information.
+While we recommend using the native [API Mesh caching](index.md) functionality, you can also provide your own content delivery network (CDN), such as Fastly. Refer to the [Fastly caching example](fastly.md) for more information.
 
 To disable native caching in API Mesh and use your own CDN, ensure that your `responseConfig` contains `"cache": false` to avoid double caching.
 

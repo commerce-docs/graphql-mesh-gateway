@@ -182,7 +182,7 @@ After that `rename`, you would expect the following query to work, but it will f
   }
   ```
 
-For other ways to extend the schema consider using [`additionalResolvers`](./resolvers/programmatic-resolvers.md) or [type merging](../../basic/transforms/type-merging.md).
+For other ways to extend the schema consider using [`additionalResolvers`](resolvers/programmatic-resolvers.md) or [type merging](../../basic/transforms/type-merging.md).
 
 ## Batching requests between sources to prevent an N+1 problem
 

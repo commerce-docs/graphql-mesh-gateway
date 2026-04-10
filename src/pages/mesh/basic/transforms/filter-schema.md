@@ -102,7 +102,7 @@ The following example includes several common filters that you can use with an A
 
 <InlineAlert variant="info" slots="text"/>
 
-For information about `bare` and `wrap` modes, read the [`bare` vs `wrap`](./bare-vs-wrap.md).
+For information about `bare` and `wrap` modes, read the [`bare` vs `wrap`](bare-vs-wrap.md).
 
 ## Config API Reference
 

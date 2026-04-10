@@ -16,7 +16,7 @@ API Mesh uses context state to provide a concise interface allowing developers t
 
 You can interact with state keys by using the `get`, `put`, and `delete` commands. These values are globally distributed, making them available at the edge.
 
-This state is available to all [hooks](./hooks.md) and [resolvers](./extend/index.md).
+This state is available to all [hooks](hooks.md) and [resolvers](extend/index.md).
 
 ## Use cases
 
@@ -24,7 +24,7 @@ While you could use these key-value pairs to store any value, they are often use
 
 Consider a scenario where, due to rate limits, you cannot generate a token on every request, and instead you generate a token and store it in state, so other workers can reuse the token.
 
-For more specific examples, see [hooks](./hooks.md) and [resolvers](./extend/index.md).
+For more specific examples, see [hooks](hooks.md) and [resolvers](extend/index.md).
 
 ## Security
 
@@ -291,7 +291,7 @@ Delete allows users to delete a key and its associated value. A delete propagate
 
 ## Hooks example
 
-The following example shows how context state can be used in a [hook](./hooks.md) to cache a service-to-service token.
+The following example shows how context state can be used in a [hook](hooks.md) to cache a service-to-service token.
 
 ```javascript
 module.exports = {
@@ -334,7 +334,7 @@ module.exports = {
 
 ## Custom resolvers example
 
-The following example shows how context state can be used in a [custom resolver](./extend/index.md) to cache a discount.
+The following example shows how context state can be used in a [custom resolver](extend/index.md) to cache a discount.
 
 ```javascript
 module.exports = {

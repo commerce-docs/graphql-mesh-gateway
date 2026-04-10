@@ -12,7 +12,7 @@ keywords:
 
 # Declarative resolvers
 
-Declarative resolvers use changes to the mesh configuration to customize resolved values. To make these changes programmatically using JavaScript, see [Programmatic resolvers](./programmatic-resolvers.md).
+Declarative resolvers use changes to the mesh configuration to customize resolved values. To make these changes programmatically using JavaScript, see [Programmatic resolvers](programmatic-resolvers.md).
 
 You can also use custom resolvers to batch repeated queries and get better response times. For more information, see [Batching](../batching.md).
 

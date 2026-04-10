@@ -16,7 +16,7 @@ This page provides the basic steps for creating your first mesh.
 
 ## Requirements
 
-Before creating a mesh, create a project or a templated project and workspace for the mesh. For other requirements see [Prerequisites](../basic/index.md#prerequisites).
+Before creating a mesh, create a project or a templated project and workspace for the mesh. For other requirements see [Prerequisites](index.md#prerequisites).
 
 ### Create a project
 
@@ -28,7 +28,7 @@ If you are [creating a templated project](https://developer.adobe.com/developer-
 
 Workspaces that already have an API mesh will have "API Mesh" displayed on their workspace card in the developer console. To learn more about viewing, deleting, or selecting projects and workspaces, see [Projects and workspaces](work-with-mesh.md#projects-and-workspaces).
 
-![workspace card](../../_images/workspace-card.png)
+![workspace card](../../images/workspace-card.png)
 
 After creating a workspace:
 
@@ -51,7 +51,7 @@ Refer to the [command reference](../advanced/index.md#aio-api-meshcreate) for a 
 
 When creating or updating a mesh, the file to upload must have the `.json` filename extension.
 
-1. Create and save a JSON configuration file that defines the properties of your mesh. Your mesh is defined by a combination of [handlers](./handlers/index.md) and [transforms](./transforms/index.md). In this example, the filename is `mesh.json`.
+1. Create and save a JSON configuration file that defines the properties of your mesh. Your mesh is defined by a combination of [handlers](handlers/index.md) and [transforms](transforms/index.md). In this example, the filename is `mesh.json`.
 
   The following mesh file can be used with minimal setup to access the endpoint of the [Venia](https://developer.adobe.com/commerce/pwa-studio/guides/packages/venia/) demo store.
 
@@ -246,11 +246,11 @@ For another example, refer to the [API Mesh multiple sources sample](https://git
 
 <InlineAlert variant="info" slots="text"/>
 
-The previous example mesh includes a [`prefix` transform](./transforms/prefix.md) for the `CatalogService` source to prevent schema conflicts. This transform adds the `catalog_` prefix to all root operations in the source.
+The previous example mesh includes a [`prefix` transform](transforms/prefix.md) for the `CatalogService` source to prevent schema conflicts. This transform adds the `catalog_` prefix to all root operations in the source.
 
 ## Update an existing mesh
 
-If you make any changes to your mesh file, such as adding [transforms](./transforms/index.md), you must publish them before the changes will be reflected in your gateway. Additionally, if a source schema is modified, you must update your mesh to allow API Mesh to cache any changes.
+If you make any changes to your mesh file, such as adding [transforms](transforms/index.md), you must publish them before the changes will be reflected in your gateway. Additionally, if a source schema is modified, you must update your mesh to allow API Mesh to cache any changes.
 
 The following command updates the mesh in the selected workspace with the settings specified in the `update-mesh.json` file.
 
@@ -322,7 +322,7 @@ As an alternative to running the [`aio api-mesh:get`](../advanced/index.md#aio-a
 
 On the API Mesh details screen, you can use the tabs to view information about your mesh.
 
-![api mesh details](../../_images/api-mesh-details.png)
+![api mesh details](../../images/api-mesh-details.png)
 
 To download a copy of your mesh file, click the **Download Mesh Config** button on the **Active Config** (or **Config**) tab.
 
@@ -340,7 +340,7 @@ If you have introspection enabled, you can use the **Documentation Explorer** to
 
 On the Deployment History tab, you can view the history of your mesh deployments.
 
-![deployment history](../../_images/deployment-history.png)
+![deployment history](../../images/deployment-history.png)
 
 The deployment history includes the following information:
 

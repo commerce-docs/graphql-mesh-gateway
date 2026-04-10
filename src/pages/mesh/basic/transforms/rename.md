@@ -136,7 +136,7 @@ For example, you could use the key-value pair field: `API(.*)` in the `from` obj
 
 <InlineAlert variant="info" slots="text"/>
 
-For information about `bare` and `wrap` modes, read the [dedicated section](../transforms/bare-vs-wrap.md).
+For information about `bare` and `wrap` modes, read the [dedicated section](bare-vs-wrap.md).
 
 ## Config API Reference
 

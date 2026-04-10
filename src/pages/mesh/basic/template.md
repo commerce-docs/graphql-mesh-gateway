@@ -20,7 +20,7 @@ From the [API Mesh template repository](https://github.com/adobe-commerce/api-me
 
 ## Create a project and workspace
 
-In the Adobe Developer Console, create a project and workspace and add the API Mesh API to it. [Create your project and workspace](./work-with-mesh.md#projects-and-workspaces).
+In the Adobe Developer Console, create a project and workspace and add the API Mesh API to it. [Create your project and workspace](work-with-mesh.md#projects-and-workspaces).
 
 ## Configure secrets
 

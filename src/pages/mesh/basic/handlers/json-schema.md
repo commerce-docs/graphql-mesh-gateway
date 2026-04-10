@@ -43,9 +43,9 @@ The `JsonSchema` source uses a different capitalization scheme than other handle
 }
 ```
 
-If your REST service's request or response format is modified, you must update your mesh configuration file with the modified request or response. Then [update your mesh](../../basic/create-mesh.md#update-an-existing-mesh) to allow API Mesh to cache any changes.
+If your REST service's request or response format is modified, you must update your mesh configuration file with the modified request or response. Then [update your mesh](../create-mesh.md#update-an-existing-mesh) to allow API Mesh to cache any changes.
 
-If your source handler's schema is modified, you must [update your mesh](../../basic/create-mesh.md#update-an-existing-mesh) to allow API Mesh to cache any changes.
+If your source handler's schema is modified, you must [update your mesh](../create-mesh.md#update-an-existing-mesh) to allow API Mesh to cache any changes.
 
 For more information on creating JSON schemas, refer to this [JSON schema tutorial](https://json-schema.org/learn/getting-started-step-by-step.html).
 
@@ -79,7 +79,7 @@ The JSON Schema handler uses the following format:
 }
 ```
 
-JSON Schema handlers can also use local sources, see [Reference local file handlers](./index.md#reference-local-files-in-handlers) for more information.
+JSON Schema handlers can also use local sources, see [Reference local file handlers](index.md#reference-local-files-in-handlers) for more information.
 
 The following example returns your header values, so you can confirm your headers are functioning properly.
 

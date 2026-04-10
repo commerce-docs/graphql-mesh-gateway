@@ -22,7 +22,7 @@ Since the `replaceField` transform is deprecated, you can achieve the same funct
 
 <InlineAlert variant="info" slots="text"/>
 
-Custom resolvers can hoist and replace existing fields as long as the field types are the same. If the field types are different, you can [extend](../../advanced/extend/index.md) the type to include a new field and hide the original field using a [`filterSchema` transform](./filter-schema.md).
+Custom resolvers can hoist and replace existing fields as long as the field types are the same. If the field types are different, you can [extend](../../advanced/extend/index.md) the type to include a new field and hide the original field using a [`filterSchema` transform](filter-schema.md).
 
 The following example hoists the Adobe Commerce `name` field from the `ProductInterface` to the `label` field of `ProductImage` by adding the `replace.js` resolver to the mesh configuration.
 

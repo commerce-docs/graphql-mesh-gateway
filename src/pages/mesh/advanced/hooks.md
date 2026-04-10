@@ -29,7 +29,7 @@ Some use cases for the `hooks` include:
 
 <InlineAlert variant="info" slots="text"/>
 
-You cannot use hooks to modify the request or the response. If you want to manipulate data, we recommend that you use [custom resolvers](./extend/resolvers/index.md).
+You cannot use hooks to modify the request or the response. If you want to manipulate data, we recommend that you use [custom resolvers](extend/resolvers/index.md).
 
 Hooks increase processing time. Use them sparingly if processing time is important. Hooks are executed in the order you provide them. However, any `blocking` hooks execute before non-blocking hooks.
 

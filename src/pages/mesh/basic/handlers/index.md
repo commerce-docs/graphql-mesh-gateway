@@ -14,9 +14,9 @@ keywords:
 
 Source handlers allow you to define sources, such as APIs, that provide data to your mesh. Each handler in your mesh corresponds to an API or other source that you can specify. API Mesh for Adobe Developer App Builder currently supports the following handlers:
 
--  [OpenAPI](./openapi.md)
--  [GraphQL](./graphql.md)
--  [JSON schemas](./json-schema.md)
+-  [OpenAPI](openapi.md)
+-  [GraphQL](graphql.md)
+-  [JSON schemas](json-schema.md)
 
 Whenever a schema is modified, you must [update your mesh](../create-mesh.md#update-an-existing-mesh) to allow API Mesh to cache any changes.
 
@@ -102,6 +102,6 @@ The following table specifies the GraphQL Mesh versions of each handler supporte
 
 | Handler Package Name | Version |
 |------------|------------|
-[`openapi`](./openapi.md) | `0.33.39`
-[`graphql`](./graphql.md) | `0.34.13`
-[`JsonSchema`](./json-schema.md) | `0.35.38`
+[`openapi`](openapi.md) | `0.33.39`
+[`graphql`](graphql.md) | `0.34.13`
+[`JsonSchema`](json-schema.md) | `0.35.38`

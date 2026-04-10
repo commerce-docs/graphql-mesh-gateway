@@ -20,11 +20,11 @@ The processes covered in this topic allow developers to set up a local environme
 
 A local development environment for API Mesh allows you to run a local version for development and testing purposes.
 
-The [`aio api-mesh:init` command](../advanced/index.md#aio-api-meshinit) allows you to build a local development environment at the specified location.
+The [`aio api-mesh:init` command](index.md#aio-api-meshinit) allows you to build a local development environment at the specified location.
 
 <InlineAlert variant="info" slots="text"/>
 
-All of these steps can be automated using flags described in the [command reference](../advanced/index.md#aio-api-meshinit).
+All of these steps can be automated using flags described in the [command reference](index.md#aio-api-meshinit).
 
 1. Run the following command.
 
@@ -67,9 +67,9 @@ Other files will vary depending on your selections during the `aio api-mesh:init
 
 ## Environment variables
 
-Environment variables allow developers to make changes to a single variable, with one or more occurrences, across multiple meshes. An `.env` file will be created automatically when running the [`init` command](../advanced/index.md#aio-api-meshinit).
+Environment variables allow developers to make changes to a single variable, with one or more occurrences, across multiple meshes. An `.env` file will be created automatically when running the [`init` command](index.md#aio-api-meshinit).
 
-The [`create`](../advanced/index.md#aio-api-meshcreate) and [`update`](../advanced/index.md#aio-api-meshupdate) commands support the use of an `--env` flag, which allows you to provide an environment variables file location. For example:
+The [`create`](index.md#aio-api-meshcreate) and [`update`](index.md#aio-api-meshupdate) commands support the use of an `--env` flag, which allows you to provide an environment variables file location. For example:
 
 ```bash
 aio api-mesh:create ../mesh.json --env .env_adhoc
@@ -77,7 +77,7 @@ aio api-mesh:create ../mesh.json --env .env_adhoc
 
 <InlineAlert variant="info" slots="text"/>
 
-If your mesh contains environment variables, but you have not specified a variable file, the [`create`](../advanced/index.md#aio-api-meshcreate) or [`update`](../advanced/index.md#aio-api-meshupdate) commands look for your variables in a file named `.env` in the current directory.
+If your mesh contains environment variables, but you have not specified a variable file, the [`create`](index.md#aio-api-meshcreate) or [`update`](index.md#aio-api-meshupdate) commands look for your variables in a file named `.env` in the current directory.
 
 The variables in your `.env` file are inserted into your mesh when the mesh is created or updated. The following is an example of an `.env` file:
 
@@ -116,7 +116,7 @@ You should only set `includeHttpDetails` to `true` in local development environm
 
 In the previous example, since `includeHTTPDetailsValue` expects a boolean value and not a string, the corresponding variable for that value `{{env.includeHTTPDetailsValue}}` is not enclosed in quotes. If you have strict settings in your IDE that prevent you from saving JSON similar to the previous example, you can instead save the mesh configuration file as a `.txt`.
 
-After running the [`create`](../advanced/index.md#aio-api-meshcreate) or [`update`](../advanced/index.md#aio-api-meshupdate) command with the `--env` flag, the published mesh will look like the following:
+After running the [`create`](index.md#aio-api-meshcreate) or [`update`](index.md#aio-api-meshupdate) command with the `--env` flag, the published mesh will look like the following:
 
 ```json
 {
@@ -138,14 +138,14 @@ After running the [`create`](../advanced/index.md#aio-api-meshcreate) or [`updat
 }
 ```
 
-You can confirm that your variables were updated successfully by running the [`aio api-mesh:get` command](../advanced/index.md#aio-api-meshget).
+You can confirm that your variables were updated successfully by running the [`aio api-mesh:get` command](index.md#aio-api-meshget).
 
 ## Reference files directly
 
 In addition to [qualifying the `content` of a file manually](../basic/handlers/index.md#reference-local-files-in-handlers), you can directly reference a file in your mesh for automatic conversion. The following restrictions apply:
 
 - Only `JS` and `JSON` file formats are allowed for handler sources.
-- `.graphql` files are supported in [`additionalTypeDefs`](./extend/index.md#using-graphql-files-with-additionaltypedefs), the `files` array, and the GraphQL handler's `source` field.
+- `.graphql` files are supported in [`additionalTypeDefs`](extend/index.md#using-graphql-files-with-additionaltypedefs), the `files` array, and the GraphQL handler's `source` field.
 - The referenced file's path must be less than 25 characters.
 - The referenced file must be in the same directory as the mesh file that references it.
 - The file cannot be in the `~` or `home` directory.
@@ -225,7 +225,7 @@ Then the mesh is updated to include the minified, stringified file:
 }
 ```
 
-You can confirm that your file was attached successfully by running the [`aio api-mesh:get` command](../advanced/index.md#aio-api-meshget).
+You can confirm that your file was attached successfully by running the [`aio api-mesh:get` command](index.md#aio-api-meshget).
 
 ## Schedule performance testing
 

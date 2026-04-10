@@ -69,7 +69,7 @@ The following example converts all of your `fieldNames` to lower case in the Ado
 
 <InlineAlert variant="info" slots="text"/>
 
-For information about `bare` and `wrap` modes, please read [`bare` vs `wrap`](./bare-vs-wrap.md).
+For information about `bare` and `wrap` modes, please read [`bare` vs `wrap`](bare-vs-wrap.md).
 
 ## Config API Reference
 

@@ -23,8 +23,8 @@ Adobe recommends enforcing authentication across any APIs connected to API Mesh.
 Other authentication considerations:
 
 * The data plane used by API Mesh is public but requires a MeshID to access.
-* API Mesh honors any downstream authorization headers provided by your [sources](./basic/handlers/index.md).
-* If you require additional authentication or authorization, you can use [custom resolvers](./advanced/extend/resolvers/index.md).
+* API Mesh honors any downstream authorization headers provided by your [sources](basic/handlers/index.md).
+* If you require additional authentication or authorization, you can use [custom resolvers](advanced/extend/resolvers/index.md).
 
 ## DDoS and rate limiting
 
@@ -38,19 +38,19 @@ If you encounter repeated `429` response codes, or for any other security issues
 
 While introspection is useful for developers using your APIs, if you are using APIs that are intended for your applications only, introspection is likely not needed.
 
-As a general API security strategy, Adobe recommends [disabling introspection](./basic/work-with-mesh.md#disable-introspection) in production environments to reduce your attack surface.
+As a general API security strategy, Adobe recommends [disabling introspection](basic/work-with-mesh.md#disable-introspection) in production environments to reduce your attack surface.
 
 ## Restrict CORS domains
 
-API Mesh provides [cross-origin resource sharing (CORS)](./advanced/cors.md), which allows you to pass resources that are usually restricted to an outside domain.
+API Mesh provides [cross-origin resource sharing (CORS)](advanced/cors.md), which allows you to pass resources that are usually restricted to an outside domain.
 
 ## Response caching
 
-[Caching GraphQL queries](./advanced/caching/index.md) or [query batching](./advanced/extend/batching.md) can help reduce the number of calls made to your backend API. Query batching can also preserve the data consistency of responses and reduce the load on your backend APIs.
+[Caching GraphQL queries](advanced/caching/index.md) or [query batching](advanced/extend/batching.md) can help reduce the number of calls made to your backend API. Query batching can also preserve the data consistency of responses and reduce the load on your backend APIs.
 
 ## Secrets management
 
-API Mesh allows you to use [secrets](./advanced/secrets.md) in your mesh configuration file to securely manage sensitive information. API Mesh encrypts secrets using AES-256 encryption.
+API Mesh allows you to use [secrets](advanced/secrets.md) in your mesh configuration file to securely manage sensitive information. API Mesh encrypts secrets using AES-256 encryption.
 
 ## Tenant isolation
 

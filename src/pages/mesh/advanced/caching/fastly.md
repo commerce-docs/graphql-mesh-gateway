@@ -105,7 +105,7 @@ API Mesh prefixes any Fastly source headers with their source name. For example,
 
 ### Test your mesh
 
-After you [create](../../basic/create-mesh.md#create-a-mesh) or [update](../../basic/create-mesh.md#update-an-existing-mesh) your mesh, run an [`aio api-mesh:describe`](../../advanced/index.md#aio-api-meshdescribe) command to view your mesh URL. Run a query against this URL to confirm that your mesh is working correctly.
+After you [create](../../basic/create-mesh.md#create-a-mesh) or [update](../../basic/create-mesh.md#update-an-existing-mesh) your mesh, run an [`aio api-mesh:describe`](../index.md#aio-api-meshdescribe) command to view your mesh URL. Run a query against this URL to confirm that your mesh is working correctly.
 
 ## Configure Fastly in Adobe Commerce
 
@@ -129,7 +129,7 @@ After setting up your API Mesh, open your Adobe Commerce Admin and use the follo
 
 1. Enter the Fastly credentials you retrieved previously into the **Fastly Service ID** and **Fastly API Token** fields. Then click the **Test Credentials** button to verify that your credentials are correct.
 
-  ![fastly-credentials](../../../_images/fastly-credentials.png)
+  ![fastly-credentials](../../../images/fastly-credentials.png)
 
 1. Under **Fastly Configuration** > **Custom VCL Snippets** click **Create** and add the following [snippets](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-custom-snippets.html). For more information on VCL subroutines, see [Custom Subroutines](https://developer.fastly.com/reference/vcl/subroutines/).
 

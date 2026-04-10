@@ -47,7 +47,7 @@ The following example adds the `commerce_` prefix to all Adobe Commerce source t
 
 <InlineAlert variant="info" slots="text"/>
 
-For information about `bare` and `wrap` modes, read the [dedicated section](./bare-vs-wrap.md).
+For information about `bare` and `wrap` modes, read the [dedicated section](bare-vs-wrap.md).
 
  In the example below, we differentiate our sources by adding an "AEM_" prefix to the [AEM](https://experienceleague.adobe.com/en/docs/experience-manager-65) source and a "Venia_" prefix to the [PWA](https://developer.adobe.com/commerce/pwa-studio/) source.
 

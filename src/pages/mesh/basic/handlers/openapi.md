@@ -39,11 +39,11 @@ API Mesh does not accept a wildcard (`*/*`) as a content type.
 }
 ```
 
-To import a remote or local schema using `.json` or `.yaml`, use a local source, see [Reference local file handlers](./index.md#reference-local-files-in-handlers) for more information.
+To import a remote or local schema using `.json` or `.yaml`, use a local source, see [Reference local file handlers](index.md#reference-local-files-in-handlers) for more information.
 
 <InlineAlert variant="info" slots="text"/>
 
-If your source handler's schema is modified, you must [update your mesh](../../basic/create-mesh.md#update-an-existing-mesh) to allow API Mesh to cache any changes.
+If your source handler's schema is modified, you must [update your mesh](../create-mesh.md#update-an-existing-mesh) to allow API Mesh to cache any changes.
 
 ## Naming conventions
 

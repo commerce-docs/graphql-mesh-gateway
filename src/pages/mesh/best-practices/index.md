@@ -15,7 +15,7 @@ keywords:
 The following pages describe recommended best practices for using API Mesh:
 
 - [Batching](../advanced/extend/batching.md) to decrease response times by combining multiple requests into a single request.
-- [CI/CD](./cicd.md) through Github Actions
+- [CI/CD](cicd.md) through Github Actions
 - [Custom resolvers](../advanced/extend/resolvers/index.md) to customize resolved values
 - [Local development](../advanced/developer-tools.md) to speed up build times
 - [Secrets management](../advanced/secrets.md) for safely storing sensitive data

@@ -27,7 +27,7 @@ The following files are used when prompting your agent to create a mesh. You can
 
 <InlineAlert variant="help" slots="text"/>
 
-The API Mesh starter kit also allows you to [create a mesh from a template](./template.md).
+The API Mesh starter kit also allows you to [create a mesh from a template](template.md).
 
 ## Prerequisites
 

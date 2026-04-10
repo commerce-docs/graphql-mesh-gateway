@@ -16,7 +16,7 @@ import UpdateNotice from '/src/_includes/update-notice.md'
 
 <Hero slots="image, heading, text"/>
 
-![API Mesh](_images/home-bg.jpeg)
+![API Mesh](images/home-bg.jpeg)
 
 # API Mesh for Adobe Developer App Builder
 
@@ -34,7 +34,7 @@ By serving multiple sources through a single gateway and providing customized re
 -  **Extensibility** - Customize and extend your APIs directly in the gateway without making changes to the API source
 -  **Advanced Security** - Web application firewall (WAF) and distributed denial-of-service (DDoS) protection for all your APIs
 
-![api mesh diagram](./_images/api-mesh-diagram.png)
+![api mesh diagram](./images/api-mesh-diagram.png)
 
 ### Related information
 

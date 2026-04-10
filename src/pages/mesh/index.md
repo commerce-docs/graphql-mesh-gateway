@@ -44,11 +44,11 @@ Due to the nature of caching, you may need to run a few queries to warm the cach
 
 ## Where to go next
 
--  [Getting started](./basic/index.md)
-   -  [Prerequisites](./basic/index.md#Prerequisites)
-   -  [Create an Adobe IO account](./basic/index.md#prerequisites)
-   -  [Configure your environment](./basic/index.md#configure-your-environment)
--  [Create a mesh](./basic/create-mesh.md)
+-  [Getting started](basic/index.md)
+   -  [Prerequisites](basic/index.md#Prerequisites)
+   -  [Create an Adobe IO account](basic/index.md#prerequisites)
+   -  [Configure your environment](basic/index.md#configure-your-environment)
+-  [Create a mesh](basic/create-mesh.md)
 
 ## Benefits of using GraphQL
 
