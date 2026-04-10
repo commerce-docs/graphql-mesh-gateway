@@ -264,7 +264,7 @@ If you are using Adobe Commerce with Fastly Next-Gen WAF enabled, you must add t
 
 The default backend does not handle "/api/" requests. To allow API requests, add a condition to the existing backend:
 
-1. In **Fastly Configuration > Backend Settings**, click on the gear icon next to **<project_id>.magento.cloud**.
+1. In **Fastly Configuration > Backend Settings**, click on the gear icon next to **`<project_id>.magento.cloud`**.
 
 1. Click **Create a new request condition** and add a condition like the following example:
 
