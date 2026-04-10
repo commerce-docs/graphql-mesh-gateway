@@ -227,4 +227,4 @@ You can confirm that your file was attached successfully by running the [`aio ap
 
 ## Schedule performance testing
 
-<Fragment src="../../performance-shcedule.md" />
+<Fragment src="../../includes/performance-schedule.md" />

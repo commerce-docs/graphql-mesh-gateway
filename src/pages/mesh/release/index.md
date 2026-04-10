@@ -10,7 +10,7 @@ keywords:
   - Tools
 ---
 
-<Fragment src="includes/update-notice.md"/>
+<Fragment src="../../includes/update-notice.md"/>
 
 # Release notes
 

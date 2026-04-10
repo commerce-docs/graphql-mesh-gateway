@@ -230,7 +230,7 @@ By declaring the `responseSample`, you can use the JSON sample in the GraphQL sc
 ```
 
 For your `./jsons/MyField.response.json` file, any JSON file can be used.
-``` --\>
+--\>
 
 ## Query Parameters
 
@@ -333,6 +333,26 @@ Here we add the `page` argument to the query parameters:
 }
 ```
 
+## Config API reference
+
+-  `operationHeaders` (type: `JSON`) - JSON object for adding headers to API calls for runtime operation execution
+-  `operations` - (required) Array of:
+    -  `object`:
+        -  `field` (type: `String`, required)
+            -  Cannot contain hyphens.
+        -  `description` (type: `String`)
+        -  `type` (type: `String (Query | Mutation | Subscription)`, required)
+        -  `requestSchema` (type: `Any`)
+        -  `requestSample` (type: `Any`)
+        -  `requestTypeName` (type: `String`)
+        -  `responseSchema` (type: `Any`)
+            -  Remote files and URLs are not supported. You must provide a local path.
+        -  `responseSample` (type: `Any`)
+            -  Remote files and URLs are not supported. You must provide a local path.
+        -  `responseTypeName` (type: `String`)
+        -  `argTypeMap` (type: `JSON`)
+-  `ignoreErrorResponses` (type: `Boolean`) - Flag for ignoring errors in the response
+
 \<!-- ### Global arguments
 
 Query arguments could be defined globally, on the handler level, so they are added to all operations.
@@ -363,27 +383,7 @@ In this example, we declare the `limit` parameter with a default value of `10` a
 <InlineAlert variant="info" slots="text"/>
 
 `queryParams` are automatically added to the query. If the argument is defined both on the handler AND operation level, the operation level argument will be used. --\>
-## Config API reference
 
--  `baseUrl` (type: `String`) - URL or file path for your JSON schema.
--  `schemaHeaders` (type: `JSON`) - JSON object for adding headers to API calls for runtime schema introspection
--  `operationHeaders` (type: `JSON`) - JSON object for adding headers to API calls for runtime operation execution
--  `operations` - (required) Array of:
-   -  `object`:
-      -  `field` (type: `String`, required)
-         -  Cannot contain hyphens.
-      -  `description` (type: `String`)
-      -  `type` (type: `String (Query | Mutation | Subscription)`, required)
-      -  `requestSchema` (type: `Any`)
-      -  `requestSample` (type: `Any`)
-      -  `requestTypeName` (type: `String`)
-      -  `responseSchema` (type: `Any`)
-         -  Remote files and URLs are not supported. You must provide a local path.
-      -  `responseSample` (type: `Any`)
-         -  Remote files and URLs are not supported. You must provide a local path.
-      -  `responseTypeName` (type: `String`)
-      -  `argTypeMap` (type: `JSON`)
--  `ignoreErrorResponses` (type: `Boolean`) - Flag for ignoring errors in the response
 \<!--   
 `path` (type: `String`, required)
 `method` (type: `String (GET | HEAD | POST | PUT | DELETE | CONNECT | OPTIONS | TRACE | PATCH)`)
