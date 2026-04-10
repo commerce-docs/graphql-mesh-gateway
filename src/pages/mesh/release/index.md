@@ -10,9 +10,7 @@ keywords:
   - Tools
 ---
 
-import UpdateNotice from '/src/_includes/update-notice.md'
-
-<UpdateNotice />
+<Fragment src="includes/update-notice.md"/>
 
 # Release notes
 
@@ -83,7 +81,7 @@ This release contains the following changes to API Mesh:
 
 ### Bug fixes
 
-- Resolved an issue that could prevent retrieving logs in the CLI. <!-- CEXT-5292 -->
+- Resolved an issue that could prevent retrieving logs in the CLI. \<!-- CEXT-5292 --\>
 
 ## September 18, 2025
 

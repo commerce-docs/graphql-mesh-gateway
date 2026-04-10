@@ -142,7 +142,7 @@ The following example returns your header values, so you can confirm your header
 }
 ```
 
-<!-- And for `mesh dev` or `mesh start`, you can pass the value using `x-my-graphql-api-token` HTTP header.
+\<!-- And for `mesh dev` or `mesh start`, you can pass the value using `x-my-graphql-api-token` HTTP header.
 
 ### From Environment Variable
 
@@ -230,7 +230,7 @@ By declaring the `responseSample`, you can use the JSON sample in the GraphQL sc
 ```
 
 For your `./jsons/MyField.response.json` file, any JSON file can be used.
-``` -->
+``` --\>
 
 ## Query Parameters
 
@@ -333,7 +333,7 @@ Here we add the `page` argument to the query parameters:
 }
 ```
 
-<!-- ### Global arguments
+\<!-- ### Global arguments
 
 Query arguments could be defined globally, on the handler level, so they are added to all operations.
 
@@ -362,7 +362,7 @@ In this example, we declare the `limit` parameter with a default value of `10` a
 
 <InlineAlert variant="info" slots="text"/>
 
-`queryParams` are automatically added to the query. If the argument is defined both on the handler AND operation level, the operation level argument will be used. -->
+`queryParams` are automatically added to the query. If the argument is defined both on the handler AND operation level, the operation level argument will be used. --\>
 ## Config API reference
 
 -  `baseUrl` (type: `String`) - URL or file path for your JSON schema.
@@ -384,7 +384,7 @@ In this example, we declare the `limit` parameter with a default value of `10` a
       -  `responseTypeName` (type: `String`)
       -  `argTypeMap` (type: `JSON`)
 -  `ignoreErrorResponses` (type: `Boolean`) - Flag for ignoring errors in the response
-<!--   
+\<!--   
 `path` (type: `String`, required)
 `method` (type: `String (GET | HEAD | POST | PUT | DELETE | CONNECT | OPTIONS | TRACE | PATCH)`)
 `headers` (type: `JSON`)
@@ -404,4 +404,4 @@ unless you define an explicit Content-Type header
     `responseTypeName` (type: `String`)
     `argTypeMap` (type: `JSON`)
     `pubsubTopic` (type: `String`, required) 
--->
+--\>

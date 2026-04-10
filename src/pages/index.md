@@ -10,9 +10,7 @@ keywords:
   - Tools
 ---
 
-import UpdateNotice from '/src/_includes/update-notice.md'
-
-<UpdateNotice />
+<Fragment src="includes/update-notice.md"/>
 
 <Hero slots="image, heading, text"/>
 

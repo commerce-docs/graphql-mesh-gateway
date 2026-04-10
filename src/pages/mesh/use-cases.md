@@ -12,7 +12,7 @@ keywords:
 
 # Use cases
 
-<!-- Page under construction, please ignore placeholder text -->
+\<!-- Page under construction, please ignore placeholder text --\>
 
 ## Connecting to Adobe Commerce services
 

@@ -10,8 +10,6 @@ keywords:
   - Tools
 ---
 
-import ContextLogger from '/src/_includes/context-logger.md'
-
 # Programmatic resolvers
 
 While [Configuration-based (declarative) resolvers](index.md) explains how `additionalResolvers` can shape and augment the unified schema with configuration changes, programmatic resolvers shape the schema programmatically using JavaScript.
@@ -318,7 +316,7 @@ module.exports = {
 
 `context.logger` is available in both [declarative](index.md) and programmatic resolvers.
 
-<ContextLogger />
+<Fragment src="../../../../context-logger.md"/>
 
 ### Example
 

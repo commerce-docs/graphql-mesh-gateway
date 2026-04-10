@@ -67,161 +67,161 @@ The following summary tables use the RACI model to show the security responsibil
 * C — Consulted
 * I — Informed
 
-<p></p>
-<table columnWidths="50,15,15,20"
+\<p\>\</p\>
+\<table columnWidths="50,15,15,20"
   css="
     td:nth-child(2), td:nth-child(3), td:nth-child(4),
-    th:nth-child(2), th:nth-child(3), th:nth-child(4) {
+    th:nth-child(2), th:nth-child(3), th:nth-child(4) \{
       text-align: center;
-    }
-  ">
-  <thead>
-    <tr>
-      <th>Task</th>
-      <th>Adobe</th>
-      <th>Customers</th>
-      <th>CDN Provider<sup>1</sup></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>DDoS Protection</td>
-      <td>R</td>
-      <td>I</td>
-      <td>R</td>
-    </tr>
-    <tr>
-      <td>Defining API Mesh WAF rules</td>
-      <td>R</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Deploying API Mesh WAF rules</td>
-      <td>R</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Deploying infrastructure updates into production</td>
-      <td>R</td>
-      <td></td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Deploying infrastructure updates into staging</td>
-      <td>R</td>
-      <td></td>
-      <td>A</td>
-    </tr>
-    <tr>
-      <td>Creating, updating, or deleting mesh configurations</td>
-      <td></td>
-      <td>R</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Deploying mesh configurations into production</td>
-      <td>A</td>
-      <td>R</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Deploying mesh configurations into staging</td>
-      <td>A</td>
-      <td>R</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Integrating external applications and extensions</td>
-      <td></td>
-      <td>R</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Configuring logging</td>
-      <td></td>
-      <td>R</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Accessing Experience League support portal</td>
-      <td>R</td>
-      <td>C</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Following API Mesh security best practices</td>
-      <td></td>
-      <td>R</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Resolving API Mesh customer security issues</td>
-      <td>C</td>
-      <td>R</td>
-      <td>C</td>
-    </tr>
-    <tr>
-      <td>Resolving API Mesh security issues</td>
-      <td>R</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Resolving CDN security issues</td>
-      <td>A</td>
-      <td></td>
-      <td>R</td>
-    </tr>
-    <tr>
-      <td>Assisting Adobe with security research (software)</td>
-      <td>R</td>
-      <td>C</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Assisting Adobe with security research (scans/audits)</td>
-      <td>R</td>
-      <td>C</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Performing PCI ASV scans on API Mesh</td>
-      <td>R</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Remediating API Mesh PCI scans</td>
-      <td>R</td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Performing PCI ASV scans on origin APIs</td>
-      <td></td>
-      <td>R</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Remediating origin API PCI scans</td>
-      <td></td>
-      <td>R</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Monitoring security logs</td>
-      <td>R</td>
-      <td>I</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Managing state data</td>
-      <td></td>
-      <td>R</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
-<p><sup>1</sup> The CDN provider column refers to a CDN managed and provided by API Mesh.</p>
+    \}
+  "\>
+  \<thead\>
+    \<tr\>
+      \<th\>Task\</th\>
+      \<th\>Adobe\</th\>
+      \<th\>Customers\</th\>
+      \<th\>CDN Provider\<sup\>1\</sup\>\</th\>
+    \</tr\>
+  \</thead\>
+  \<tbody\>
+    \<tr\>
+      \<td\>DDoS Protection\</td\>
+      \<td\>R\</td\>
+      \<td\>I\</td\>
+      \<td\>R\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Defining API Mesh WAF rules\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Deploying API Mesh WAF rules\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Deploying infrastructure updates into production\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+      \<td\>A\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Deploying infrastructure updates into staging\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+      \<td\>A\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Creating, updating, or deleting mesh configurations\</td\>
+      \<td\>\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Deploying mesh configurations into production\</td\>
+      \<td\>A\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Deploying mesh configurations into staging\</td\>
+      \<td\>A\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Integrating external applications and extensions\</td\>
+      \<td\>\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Configuring logging\</td\>
+      \<td\>\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Accessing Experience League support portal\</td\>
+      \<td\>R\</td\>
+      \<td\>C\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Following API Mesh security best practices\</td\>
+      \<td\>\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Resolving API Mesh customer security issues\</td\>
+      \<td\>C\</td\>
+      \<td\>R\</td\>
+      \<td\>C\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Resolving API Mesh security issues\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Resolving CDN security issues\</td\>
+      \<td\>A\</td\>
+      \<td\>\</td\>
+      \<td\>R\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Assisting Adobe with security research (software)\</td\>
+      \<td\>R\</td\>
+      \<td\>C\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Assisting Adobe with security research (scans/audits)\</td\>
+      \<td\>R\</td\>
+      \<td\>C\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Performing PCI ASV scans on API Mesh\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Remediating API Mesh PCI scans\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Performing PCI ASV scans on origin APIs\</td\>
+      \<td\>\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Remediating origin API PCI scans\</td\>
+      \<td\>\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Monitoring security logs\</td\>
+      \<td\>R\</td\>
+      \<td\>I\</td\>
+      \<td\>\</td\>
+    \</tr\>
+    \<tr\>
+      \<td\>Managing state data\</td\>
+      \<td\>\</td\>
+      \<td\>R\</td\>
+      \<td\>\</td\>
+    \</tr\>
+  \</tbody\>
+\</table\>
+\<p\>\<sup\>1\</sup\> The CDN provider column refers to a CDN managed and provided by API Mesh.\</p\>

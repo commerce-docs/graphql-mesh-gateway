@@ -50,14 +50,14 @@ While most [create](../advanced/index.md#aio-api-meshcreate) and [update](../adv
 To check the status of your mesh, use the [`aio api-mesh:status` command](../advanced/index.md#aio-api-meshstatus), which allows you to view where your mesh is in the provisioning process.
 
 Additionally, due to our new asynchronous architecture, the create/update commands now add your mesh to a queue where it waits to be processed, which means you will no longer receive an error if your mesh fails to create/update. We have added the [`aio api-mesh:status` command](../advanced/index.md#aio-api-meshstatus) to allow you to check the processing status of your mesh and see any errors that occurred during creating/updating.
-<!-- 
+\<!-- 
 ### Update existing meshes
 
 API Mesh now runs on updated versions of GraphQL Mesh [handlers](../basic/handlers/index.md) and [transforms](../basic/transforms/index.md). To move to the new codebase and enable these upgrades, update your existing meshes.
 
-1. [Select the workspace](work-with-mesh.md#select-a-project-or-workspace) that contains the mesh you want to update.
+1. [Select the workspace](../basic/work-with-mesh.md#select-a-project-or-workspace) that contains the mesh you want to update.
 
-1. [Retrieve](work-with-mesh.md#retrieve-a-previously-created-meshid-or-mesh-endpoint-url) your previously created mesh by running the following [`get` command](../advanced/index.md#aio-api-meshget).
+1. [Retrieve](../basic/work-with-mesh.md#retrieve-a-previously-created-meshid-or-mesh-endpoint-url) your previously created mesh by running the following [`get` command](../advanced/index.md#aio-api-meshget).
 
     ```bash
     aio api-mesh:get download.json
@@ -65,10 +65,10 @@ API Mesh now runs on updated versions of GraphQL Mesh [handlers](../basic/handle
 
   This command creates a file named `download.json` that contains a copy of the mesh from the selected workspace.
 
-1. Run the [update](create-mesh.md#update-an-existing-mesh) command and reference the previously created file.
+1. Run the [update](../basic/create-mesh.md#update-an-existing-mesh) command and reference the previously created file.
 
     ```bash
     aio api-mesh:update download.json
     ```
 
-    It can take a few minutes to fully provision and propagate your mesh. -->
+    It can take a few minutes to fully provision and propagate your mesh. --\>

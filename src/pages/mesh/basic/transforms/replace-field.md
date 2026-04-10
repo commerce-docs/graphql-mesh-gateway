@@ -65,7 +65,7 @@ module.exports = {
 } 
 ```
 
-<!-- 
+\<!-- 
 ## How the transform works
 
 `from` defines your source, the field in the schema you want to replace.
@@ -213,4 +213,4 @@ type Author {
       -  `field` (type: `String`, required)
    -  `scope` (type: `String (config | hoistValue)`)
    -  `composer` (type: `Any`)
-   -  `name` (type: `String`) -->
+   -  `name` (type: `String`) --\>
