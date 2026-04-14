@@ -12,7 +12,7 @@ keywords:
 
 # CORS headers
 
-Cross-origin resource sharing (CORS) allows you to pass resources that are usually restricted to an outside domain. Refer to [MDN's documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for more information on CORS headers.
+Cross-origin resource sharing (CORS) allows you to pass resources that are usually restricted to an outside domain. Refer to [MDN's documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) for more information on CORS headers.
 
 <InlineAlert variant="info" slots="text"/>
 

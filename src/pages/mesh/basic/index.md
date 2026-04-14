@@ -25,7 +25,7 @@ Before you can begin using the API Mesh, you must install:
 You will also need:
 
 -  An Adobe IO account. If you do not already have an Adobe IO account, [install Adobe IO](https://developer.adobe.com/app-builder/docs/guides/runtime_guides/tools/cli-install).
--  An API to integrate (for example, your own API, any public OpenAPI REST endpoint, or an [Adobe Experience Manager API](https://experienceleague.adobe.com/docs/experience-manager-screens/user-guide/developing/rest-api.html)).
+-  An API to integrate (for example, your own API, any public OpenAPI REST endpoint, or an [Adobe Experience Manager API](https://experienceleague.adobe.com/en/docs/experience-manager-screens/user-guide/developing/rest-api)).
 -  (Optional) A working instance of Adobe Commerce with either Luma or Venia sample data. You can also include a Live Search instance. The examples in this guide mainly use Commerce to demonstrate features and functionality.
 
 ## Install the `aio` CLI

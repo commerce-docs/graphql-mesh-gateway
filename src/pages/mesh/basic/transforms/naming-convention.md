@@ -75,8 +75,7 @@ For information about `bare` and `wrap` modes, please read [`bare` vs `wrap`](ba
 
 <InlineAlert variant="info" slots="text"/>
 
-\<p\>
-The following case options should not be used because they violate the \<a href="https://spec.graphql.org/October2021/#sec-Names)"\>GraphQL spec\</a\>. These options will likely be deprecated in the future.
+The following case options should not be used because they violate the [GraphQL spec](https://spec.graphql.org/October2021/#sec-Names). These options will likely be deprecated in the future.
 
 - `capitalCase`
 - `dotCase`

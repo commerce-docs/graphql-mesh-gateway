@@ -35,7 +35,7 @@ This tutorial covers the basic actions you can perform in a mesh using API Mesh 
 
 1. In the [Adobe Developer Console](https://developer.adobe.com/console), select the desired organization from the dropdown in the top-right corner.
 
-1. Then click [**Create project from template**](https://developer.adobe.com/developer-console/docs/guides/projects/projects-template/).
+1. Then click [**Create project from template**](https://developer.adobe.com/developer-console/docs/guides/projects/projects-template).
 
 1. Select **App Builder**.
 
@@ -148,7 +148,7 @@ In your GraphQL client, run the following GraphQL queries:
 
 These queries demonstrate how you can return data from multiple sources within your mesh with a single request.
 
-The [`storeConfig`](https://developer.adobe.com/commerce/webapi/graphql/schema/store/queries/store-config/) query returns information from the `GraphQL` handler, while the [GetV1DirectoryCountries](https://adobe-commerce.redoc.ly/2.4.6-admin/tag/directorycountries#operation/GetV1DirectoryCountries) query returns information from the `REST`  handler.
+The [`storeConfig`](https://developer.adobe.com/commerce/webapi/graphql/schema/store/queries/store-config/) query returns information from the `GraphQL` handler, while the [GetV1DirectoryCountries](https://adobe-commerce.redoc.ly/2.4.6-admin/tag/directorycountries/) query returns information from the `REST`  handler.
 
 ## Add a transform
 

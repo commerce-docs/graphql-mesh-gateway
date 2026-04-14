@@ -12,7 +12,7 @@ keywords:
 
 # Command Reference
 
-API Mesh for Adobe Developer App Builder CLI allows you to manage and modify meshes. This page covers commands exclusive to API Mesh. For authorization and other Adobe I/O Extensible CLI commands, refer to the [Adobe IO CLI command list](https://github.com/adobe/aio-cli#commands). For installation instructions, refer to [Getting Started](../basic/index.md).
+API Mesh for Adobe Developer App Builder CLI allows you to manage and modify meshes. This page covers commands exclusive to API Mesh. For authorization and other Adobe I/O Extensible CLI commands, refer to the [Adobe IO CLI command list](https://github.com/adobe/aio-cli). For installation instructions, refer to [Getting Started](../basic/index.md).
 
 ## aio api-mesh:init
 
@@ -32,7 +32,7 @@ The following arguments are all optional. If you do not supply them, the termina
 
 `-g` or `--git` is a binary argument that requires `Y` or `N` to determine if you want to use `git` for your local environment.
 
-`-m` or `--packageManager` is a binary argument that requires `npm` or `yarn` to determine which package manager to use for the local environment. (Requires [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) or [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable).)
+`-m` or `--packageManager` is a binary argument that requires `npm` or `yarn` to determine which package manager to use for the local environment. (Requires [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) or [`yarn`](https://classic.yarnpkg.com/en/docs/install).)
 
 `--help` provides information on the specified command.
 
@@ -88,7 +88,7 @@ The following arguments are all optional.
 
 `--help` provides information on the specified command.
 
-For more information on debugging, see the [`node.js` Inspector documentation.](https://nodejs.org/en/docs/inspector#inspector-clients)
+For more information on debugging, see the [`node.js` Inspector documentation.](https://nodejs.org/en/learn/getting-started/debugging)
 
 #### Example
 
@@ -743,7 +743,7 @@ Expected file size is 500 KB. Confirm mesh_logs.csv download? (y/n)`
 Successfully downloaded the logs to mesh_logs.csv.
 ```
 
-The downloaded file will look similar to [this example](https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/refs/heads/main/static/examples/bulk-logs.csv).
+The downloaded file will look similar to [this example](https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/static/examples/bulk-logs.csv).
 
 ## aio api-mesh:cache:purge
 

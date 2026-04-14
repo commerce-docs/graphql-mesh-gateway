@@ -13,7 +13,7 @@ keywords:
 
 # Dynamic cache control with Fastly
 
-Adding a content delivery network (CDN) for caching dynamic content with API Mesh for Adobe Developer App Builder provides additional security and improved performance. Follow these instructions to integrate API Mesh, Adobe Commerce, and [Fastly](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/fastly.html?lang=en) (provided with Adobe Commerce Pro accounts).
+Adding a content delivery network (CDN) for caching dynamic content with API Mesh for Adobe Developer App Builder provides additional security and improved performance. Follow these instructions to integrate API Mesh, Adobe Commerce, and [Fastly](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly) (provided with Adobe Commerce Pro accounts).
 
 ## Configure headers in API Mesh
 
@@ -120,7 +120,7 @@ After setting up your API Mesh, open your Adobe Commerce Admin and use the follo
 - API Mesh
   - The ability to create or update a mesh
 
-1. [Get the following Fastly credentials](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/setup-fastly/fastly-configuration.html?lang=en#get-fastly-credentials):
+1. [Get the following Fastly credentials](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-configuration):
 
    - Fastly Service ID
    - Fastly API Token
@@ -131,7 +131,7 @@ After setting up your API Mesh, open your Adobe Commerce Admin and use the follo
 
   ![fastly-credentials](../../../images/fastly-credentials.png)
 
-1. Under **Fastly Configuration** > **Custom VCL Snippets** click **Create** and add the following [snippets](https://experienceleague.adobe.com/docs/commerce-cloud-service/user-guide/cdn/custom-vcl-snippets/fastly-vcl-custom-snippets.html). For more information on VCL subroutines, see [Custom Subroutines](https://developer.fastly.com/reference/vcl/subroutines/).
+1. Under **Fastly Configuration** > **Custom VCL Snippets** click **Create** and add the following [snippets](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-custom-snippets). For more information on VCL subroutines, see [Custom Subroutines](https://developer.fastly.com/reference/vcl/subroutines/).
 
   **NOTE**: The `Priority` of each VCL snippet determines the order in which VCL subroutines are executed. The following `Priority` fields only apply to the default configuration of Adobe Commerce. If you have other custom snippets, you will need to adjust the priorities accordingly.
 

@@ -70,7 +70,7 @@ The mesh will respect and forward these cache directives at the mesh level, but 
 
 ## Enable native caching
 
-API Mesh supports dynamic content caching natively using standard [HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching).
+API Mesh supports dynamic content caching natively using standard [HTTP caching](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching).
 
 To enable caching in API Mesh, add `"cache": true` to your `responseConfig` in your mesh configuration file. Caching is disabled by default.
 
@@ -149,7 +149,7 @@ For more information, refer to the [Command reference](../index.md#aio-api-meshc
 
 ## Use your own CDN
 
-While we recommend using the native [API Mesh caching](index.md) functionality, you can also provide your own content delivery network (CDN), such as Fastly. Refer to the [Fastly caching example](fastly.md) for more information.
+While we recommend using the native [API Mesh caching](#enable-native-caching) functionality, you can also provide your own content delivery network (CDN), such as Fastly. Refer to the [Fastly caching example](fastly.md) for more information.
 
 To disable native caching in API Mesh and use your own CDN, ensure that your `responseConfig` contains `"cache": false` to avoid double caching.
 

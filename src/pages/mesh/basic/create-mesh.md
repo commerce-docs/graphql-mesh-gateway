@@ -24,7 +24,7 @@ When you create a mesh, you must assign the mesh to a specific project. To creat
 
 ### Add a workspace to your project
 
-If you are [creating a templated project](https://developer.adobe.com/developer-console/docs/guides/projects/projects-template/), you can add [workspaces](https://developer.adobe.com/developer-console/docs/guides/projects/projects-template/#workspaces). Workspaces allow you to create separate environments. You can also create workspaces for each developer on your team.
+If you are [creating a templated project](https://developer.adobe.com/developer-console/docs/guides/projects/projects-template), you can add [workspaces](https://developer.adobe.com/developer-console/docs/guides/projects/projects-template#workspaces). Workspaces allow you to create separate environments. You can also create workspaces for each developer on your team.
 
 Workspaces that already have an API mesh will have "API Mesh" displayed on their workspace card in the developer console. To learn more about viewing, deleting, or selecting projects and workspaces, see [Projects and workspaces](work-with-mesh.md#projects-and-workspaces).
 
@@ -119,7 +119,7 @@ The edge mesh URL offers several benefits because the edge is closer to your dat
 
 Edge meshes are resilient and performant because they exist closer to the origin of your query, in over 330 locations in 120 countries. This means that your queries can hit a server that has not initialized your mesh, causing a cold start.
 
-If you are using an API platform or a GraphQL client, add the [`Connection: keep-alive`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Keep-Alive) header to your requests. This header keeps the connection to the server open for future requests, which can significantly improve performance because it ensures you are hitting a warm cache. Using this header also prevents the unnecessary repetition of several steps of the [HTTP handshake](https://developer.mozilla.org/en-US/docs/Web/HTTP/Connection_management_in_HTTP_1.x).
+If you are using an API platform or a GraphQL client, add the [`Connection: keep-alive`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Keep-Alive) header to your requests. This header keeps the connection to the server open for future requests, which can significantly improve performance because it ensures you are hitting a warm cache. Using this header also prevents the unnecessary repetition of several steps of the [HTTP handshake](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x).
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -159,7 +159,7 @@ Refer to the [Command reference](../advanced/index.md#aio-api-meshsourceinstall)
 
 ## Create a mesh from a template
 
-You can also create a mesh automatically when [bootstrapping a new app through the CLI](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#4-bootstrapping-new-app-using-the-cli):
+You can also create a mesh automatically when [bootstrapping a new app through the CLI](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app):
 
 1. Navigate to the location you want to initialize your project and enter the following command:
 

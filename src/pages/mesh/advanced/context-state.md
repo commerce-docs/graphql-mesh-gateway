@@ -123,7 +123,8 @@ Delete allows users to delete a key and its associated value. A delete propagate
 
 ## Adobe Commerce as a Cloud Service (SaaS) REST example
 
-<Edition slots="saas" />
+<Edition slots="text" backgroundColor="green"/>
+[SaaS only](https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions)
 
 **Prerequisites:**
 

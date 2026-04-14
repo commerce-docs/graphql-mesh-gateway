@@ -26,7 +26,7 @@ In the Adobe Developer Console, create a project and workspace and add the API M
 
 In the Developer Console, click the **Download** button in the top-right corner of the Project Overview page.
 
-In your cloned repository, add the following [configuration variables](https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository) from the JSON file.
+In your cloned repository, add the following [configuration variables](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-variables) from the JSON file.
 
 | Variable name in GitHub | Name defined in downloaded JSON |
 | ---------- | ------- |

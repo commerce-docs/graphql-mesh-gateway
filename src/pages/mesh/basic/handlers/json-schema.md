@@ -47,7 +47,7 @@ If your REST service's request or response format is modified, you must update y
 
 If your source handler's schema is modified, you must [update your mesh](../create-mesh.md#update-an-existing-mesh) to allow API Mesh to cache any changes.
 
-For more information on creating JSON schemas, refer to this [JSON schema tutorial](https://json-schema.org/learn/getting-started-step-by-step.html).
+For more information on creating JSON schemas, refer to this [JSON schema tutorial](https://json-schema.org/learn/getting-started-step-by-step).
 
 <InlineAlert variant="info" slots="text"/>
 

@@ -46,7 +46,7 @@ Allows developers to integrate private and third-party APIs and other software i
 
 <DiscoverBlock slots="link, text"/>
 
-[App Builder](https://developer.adobe.com/app-builder/docs/overview/)
+[App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/)
 
 Is a complete framework that enables enterprise developers to build and deploy custom web applications that extend Adobe Experience Cloud solutions and run on Adobe infrastructure.
 
