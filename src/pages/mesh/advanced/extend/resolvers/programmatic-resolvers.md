@@ -24,7 +24,7 @@ In this example, we will use `additionalResolvers` to apply a set of discounts t
 
 - The `Venia` handler is a publicly available Adobe Commerce GraphQL endpoint for the Venia sample storefront.
 
-- The `DiscountsAPI` handler points to [a `.json` file](https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/src/pages/_examples/discounts-api.json) that contains key-value pairs of sample item names and their corresponding discount percentages.
+- The `DiscountsAPI` handler points to [a `.json` file](https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/refs/heads/main/static/examples/discounts-api.json) that contains key-value pairs of sample item names and their corresponding discount percentages.
 
 ```json
 {
@@ -43,14 +43,14 @@ In this example, we will use `additionalResolvers` to apply a set of discounts t
         "name": "DiscountsAPI",
         "handler": {
           "JsonSchema": {
-            "baseUrl": "https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/src/pages/_examples",
+            "baseUrl": "https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/refs/heads/main/static/examples",
             "operations": [
               {
                 "type": "Query",
                 "field": "discounts",
                 "path": "/discounts-api.json",
                 "method": "GET",
-                "responseSample": "https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/src/pages/_examples/discounts-api.json"
+                "responseSample": "https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/refs/heads/main/static/examples/discounts-api.json"
               }
             ]
           }
@@ -113,7 +113,7 @@ module.exports = {
 };
 ```
 
-This `javascript` file targets the `special_price` field on `ConfigurableProduct` that uses the `maximum_price` for a product and then applies the discount listed for that product in the [`discountsapi.json` file](https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/src/pages/_examples/discounts-api.json). The following arguments define how the `custom resolver` interacts with your mesh:
+This `javascript` file targets the `special_price` field on `ConfigurableProduct` that uses the `maximum_price` for a product and then applies the discount listed for that product in the [`discountsapi.json` file](https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/refs/heads/main/static/examples/discounts-api.json). The following arguments define how the `custom resolver` interacts with your mesh:
 
 - `special_price` - the name of the field we are adding a custom resolver to
 
@@ -279,7 +279,7 @@ module.exports = {
 
           return globalThis
             .fetch(
-              "raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/src/pages/_examples/discounts-api.json"
+              "https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/refs/heads/main/static/examples/discounts-api.json"
             )
             .then((response) => {
               if (response) {

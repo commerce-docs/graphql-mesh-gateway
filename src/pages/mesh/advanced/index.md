@@ -743,7 +743,7 @@ Expected file size is 500 KB. Confirm mesh_logs.csv download? (y/n)`
 Successfully downloaded the logs to mesh_logs.csv.
 ```
 
-The downloaded file will look similar to [this example](../../examples/bulk-logs.csv).
+The downloaded file will look similar to [this example](https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/refs/heads/main/static/examples/bulk-logs.csv).
 
 ## aio api-mesh:cache:purge
 
