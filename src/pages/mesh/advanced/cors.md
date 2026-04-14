@@ -33,7 +33,7 @@ The following examples show how to use CORS with a single origin or with multipl
 
 <CodeBlock slots="heading, code" repeat="2" languages="json, json" />
 
-#### Single origin
+## Single origin
 
 ```json
 {
@@ -59,7 +59,7 @@ The following examples show how to use CORS with a single origin or with multipl
 }
 ```
 
-#### Multiple origins
+## Multiple origins
 
 ```json
 {

@@ -147,7 +147,7 @@ We recommend providing a local schema by using the [`additionalTypeDefs`](../../
 -  `operationHeaders` (type: `JSON`) - JSON object for adding headers to API calls for runtime operation execution
 -  `useGETForQueries` (type: `Boolean`) - An HTTP GET method for query operations
 -  `method` (type: `String (GET | POST)`) - An HTTP method for GraphQL operations
-\<!-- 
+\<!--
 `subscriptionsEndpoint` (type: `String`) - A URL to your endpoint serving all subscription queries for this source
 `customFetch` (type: `Any`) - Path to a custom W3 Compatible Fetch Implementation
 `webSocketImpl` (type: `String`) - Path to a custom W3 Compatible WebSocket Implementation
@@ -159,5 +159,5 @@ WS - New graphql-ws
 LEGACY_WS - Legacy subscriptions-transport-ws
 `retry` (type: `Int`) - Retry attempts if fails
 `timeout` (type: `Int`) - Timeout in milliseconds
-`batch` (type: `Boolean`) - Enable/Disable automatic query batching 
+`batch` (type: `Boolean`) - Enable/Disable automatic query batching
 --\>

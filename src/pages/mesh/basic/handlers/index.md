@@ -102,6 +102,6 @@ The following table specifies the GraphQL Mesh versions of each handler supporte
 
 | Handler Package Name | Version |
 |------------|------------|
-[`openapi`](openapi.md) | `0.33.39`
-[`graphql`](graphql.md) | `0.34.13`
-[`JsonSchema`](json-schema.md) | `0.35.38`
+| [`openapi`](openapi.md) | `0.33.39` |
+| [`graphql`](graphql.md) | `0.34.13` |
+| [`JsonSchema`](json-schema.md) | `0.35.38` |

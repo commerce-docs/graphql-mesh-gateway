@@ -81,7 +81,7 @@ If your source's cache-control headers contain any of the following directives, 
 
 - `must-understand`
 
-**Examples**
+#### Examples
 
 The following example scenarios indicate the resulting `Response header` from two conflicting sources:
 

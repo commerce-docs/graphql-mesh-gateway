@@ -194,7 +194,7 @@ The `resolvers.js` file contains similar logic to the `additionalResolvers.js` f
 
 <CodeBlock slots="heading, code" repeat="3" languages="json, javascript, graphql" />
 
-#### `mesh.json`
+### `mesh.json`
 
 ```json
 {
@@ -237,7 +237,7 @@ The `resolvers.js` file contains similar logic to the `additionalResolvers.js` f
 }
 ```
 
-#### `resolver.js`
+### `resolver.js`
 
 ```javascript
 module.exports = {
@@ -283,7 +283,7 @@ module.exports = {
 };
 ```
 
-#### Sample query
+### Sample query
 
 ```graphql
 {

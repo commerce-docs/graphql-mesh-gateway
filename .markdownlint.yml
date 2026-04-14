@@ -30,6 +30,7 @@ MD030: false
 # MD033/no-inline-html - Inline HTML (allow Adobe doc components)
 MD033:
   allowed_elements:
+    - Announcement
     - HeroSimple
     - Resources
     - DiscoverBlock
@@ -68,6 +69,10 @@ MD049: false
 # MD050/strong-style - Strong style
 MD050:
   style: asterisk
+
+# MD051/link-fragments - Link fragments should be valid
+MD051:
+  ignored_pattern: '^aio-api-mesh'
 
 # MD055/table-pipe-style - Require leading and trailing pipes (matches AM023)
 MD055:

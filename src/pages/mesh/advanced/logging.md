@@ -133,13 +133,13 @@ The [example dashboard](#example-dashboard) displays: request count, request met
 
 <CodeBlock slots="heading, code" repeat="2" languages="graphql, json" />
 
-#### Query mesh logs
+### Query mesh logs
 
 ```sql
 SELECT `Exceptions`, `Logs` as Logs, `RayID` as RayId, `Request.Method`, `Request.URL`, `Response.Status`, `ScriptTags`, `meshId` as meshId, logtype FROM Log SINCE 7 days ago ORDER by timestamp DESC LIMIT MAX WHERE meshId = '' AND ('' = '' OR RayID = '') and logtype = 'mesh_logs'
 ```
 
-#### Query access logs
+### Query access logs
 
 ```sql
 FROM Log SELECT ClientIP AS 'Client IP', RayID, ClientDeviceType AS 'Device', ClientRequestMethod AS 'Method', ClientRequestURI AS 'URI', EdgeColoCode AS 'Edge', EdgeServerIP AS 'Edge IP', ClientRequestSource AS 'Request Source', CacheCacheStatus AS 'Cache Status', EdgeResponseStatus AS 'Response Status', EdgeResponseBytes AS 'Response Bytes', EdgeResponseContentType AS 'Content Type', OriginResponseStatus AS 'Origin Response', OriginIP, WorkerCPUTime, WorkerWallTimeUs WHERE CacheCacheStatus IS NOT NULL AND ClientRequestSource != 'edgeWorkerCacheAPI' AND ('' = '' OR RayID = '') and meshId = '' and logtype = 'access_logs'

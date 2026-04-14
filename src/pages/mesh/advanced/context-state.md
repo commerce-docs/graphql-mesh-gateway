@@ -125,7 +125,7 @@ Delete allows users to delete a key and its associated value. A delete propagate
 
 <Edition slots="saas" />
 
-**Prerequisites**
+**Prerequisites:**
 
 - [Add the **Adobe Commerce as a Cloud Service** API](../basic/create-mesh.md#add-a-workspace-to-your-project) to your Developer Console workspace.
 - Create an **OAuth Server-to-Server** credential for `client id`, `client secret`, and `scope`.
@@ -186,9 +186,9 @@ Delete allows users to delete a key and its associated value. A delete propagate
      * @returns {boolean}
      */
     function isTokenValid({ accessToken, expiresIn }) {
-	const now = Date.now();
-	const expires = now + (expiresIn * 1000);
-	return accessToken && now < expires;
+    const now = Date.now();
+    const expires = now + (expiresIn * 1000);
+    return accessToken && now < expires;
     }
 
     module.exports = {

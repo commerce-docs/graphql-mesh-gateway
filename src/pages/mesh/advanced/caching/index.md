@@ -37,13 +37,13 @@ To see examples for response caching, refer to the [Commerce code samples reposi
 
 For API Mesh to cache a response, the request and response must meet the following requirements:
 
-**Request**
+### Request
 
 - The request method must be `GET` or `POST`.
 - The request must be a query operation type.
 - The request must not be an introspection query.
 
-**Response**
+### Response
 
 - The response status must be in the range `200` - `299`.
 - The response body cannot contain errors, as defined by [GraphQL specification](https://spec.graphql.org/October2021/#sec-Errors).
@@ -109,7 +109,7 @@ GET requests are limited to 2,048 characters.
 
 You can verify the caching behavior of GraphQL requests based on the values of the returned response headers when caching is enabled.
 
-**Response headers**
+### Response headers
 
 The following response headers are returned when caching is enabled:
 

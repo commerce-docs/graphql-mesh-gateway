@@ -384,7 +384,7 @@ In this example, we declare the `limit` parameter with a default value of `10` a
 
 `queryParams` are automatically added to the query. If the argument is defined both on the handler AND operation level, the operation level argument will be used. --\>
 
-\<!--   
+\<!--
 `path` (type: `String`, required)
 `method` (type: `String (GET | HEAD | POST | PUT | DELETE | CONNECT | OPTIONS | TRACE | PATCH)`)
 `headers` (type: `JSON`)
@@ -403,5 +403,5 @@ unless you define an explicit Content-Type header
     `responseSample` (type: `Any`)
     `responseTypeName` (type: `String`)
     `argTypeMap` (type: `JSON`)
-    `pubsubTopic` (type: `String`, required) 
+    `pubsubTopic` (type: `String`, required)
 --\>

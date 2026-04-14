@@ -28,7 +28,7 @@ The following example hoists the Adobe Commerce `name` field from the `ProductIn
 
 <CodeBlock slots="heading, code" repeat="2" languages="json, javascript" />
 
-#### `mesh.json`
+### `mesh.json`
 
 ```json
 {
@@ -48,7 +48,7 @@ The following example hoists the Adobe Commerce `name` field from the `ProductIn
 }
 ```
 
-#### `replace.js`
+### `replace.js`
 
 ```javascript
 module.exports = {
@@ -65,7 +65,6 @@ module.exports = {
 } 
 ```
 
-\<!-- 
 ## How the transform works
 
 `from` defines your source, the field in the schema you want to replace.

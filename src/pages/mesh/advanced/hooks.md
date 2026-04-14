@@ -21,6 +21,7 @@ Some use cases for the `hooks` include:
 -  Checking for an authorization token before making a request
 
 \<!--
+
 -  Publishing events once all operations are executed
 -  Creating a cart in a 3rd-party store when calling the `Create Cart` mutation (Adobe Commerce)
 --\>
@@ -43,12 +44,6 @@ Hooks are plugins that accept the following arguments:
     }
 }
 ```
-
-\<!-- 
-`target` (string) - The target GraphQL node.
-
-    For example, `Query.availableStores` targets [`availableStores`](https://developer.adobe.com/commerce/webapi/graphql/schema/store/queries/available-stores/), which means that if the query calls `availableStores`, then the `composer` will execute.
---\>
 
 - `composer` (string) - The local or remote file location of the function you want to execute.
   
@@ -75,71 +70,71 @@ All hooks receive the following payload. Specific hooks extend their types based
 ```ts
 // Logger utility
 interface Logger {
-	debug: (...args: any[]) => void;
-	info: (...args: any[]) => void;
-	warn: (...args: any[]) => void;
-	error: (...args: any[]) => void;
+  debug: (...args: any[]) => void;
+  info: (...args: any[]) => void;
+  warn: (...args: any[]) => void;
+  error: (...args: any[]) => void;
 }
 
 // State API interface for managing key-value pairs
 export interface StateApi {
-	/**
-	 * Get a value by key
-	 * @param key Key to retrieve
-	 */
-	get(key: string): Promise<string | null>;
+  /**
+   * Get a value by key
+   * @param key Key to retrieve
+   */
+  get(key: string): Promise<string | null>;
 
-	/**
-	 * Put a key-value pair with optional TTL
-	 * @param key Key to store
-	 * @param value Value to store
-	 * @param config Optional configuration object that may contain a TTL value in seconds
-	 */
-	put(key: string, value: string, config?: { ttl?: number }): Promise<void>;
+ /**
+  * Put a key-value pair with optional TTL
+  * @param key Key to store
+  * @param value Value to store
+  * @param config Optional configuration object that may contain a TTL value in seconds
+  */
+ put(key: string, value: string, config?: { ttl?: number }): Promise<void>;
 
-	/**
-	 * Delete a key-value pair.
-	 * @param key Key to delete.
-	 */
-	delete(key: string): Promise<void>;
+ /**
+  * Delete a key-value pair.
+  * @param key Key to delete.
+  */
+ delete(key: string): Promise<void>;
 }
 
 // Context available within a hook function payload.
 interface HookPayloadContext {
-	// Request from the client
-	request: Request;
+ // Request from the client
+ request: Request;
 
-	// GraphQL parameters
-	params: GraphQLParams;
+ // GraphQL parameters
+ params: GraphQLParams;
 
-	// Request body
-	body?: unknown;
+ // Request body
+ body?: unknown;
 
-	// Request headers
-	headers?: Record<string, string>;
+ // Request headers
+ headers?: Record<string, string>;
 
-	// Secrets (Local hooks only)
-	secrets?: Record<string, string>;
+ // Secrets (Local hooks only)
+ secrets?: Record<string, string>;
 
-	// State API (Local hooks only)
-	state?: StateApi;
+ // State API (Local hooks only)
+ state?: StateApi;
 
-	// Common logger (Local hooks only)
-	logger?: Logger;
+ // Common logger (Local hooks only)
+ logger?: Logger;
 }
 
 // Payload that all hook functions receive
 interface HookPayload {
-	context: HookFunctionPayloadContext;
+ context: HookFunctionPayloadContext;
 
-	// GraphQL document node
-	document?: DocumentNode;
+ // GraphQL document node
+ document?: DocumentNode;
 };
 
 // Payload that all source hook functions receive, including beforeSource and afterSource.
 interface SourceHookPayload extends HookPayload {
-	// Name of the source
-	sourceName?: string;
+ // Name of the source
+ sourceName?: string;
 };
 ```
 
@@ -156,16 +151,16 @@ Hooks have the following response. Response information for specific hooks is de
  * Hook response status.
  */
 export enum HookResponseStatus {
-	SUCCESS = 'SUCCESS',
-	ERROR = 'ERROR',
+ SUCCESS = 'SUCCESS',
+ ERROR = 'ERROR',
 }
 
 /**
  * Response from a hook.
  */
 interface HookResponse {
-	status: HookResponseStatus;
-	message: string;
+ status: HookResponseStatus;
+ message: string;
 }
 ```
 
@@ -193,7 +188,9 @@ The [`beforeAll` hook](#beforeall-hooks) is a singular hook.
     }
 ],
 ```
-\<!-- 
+
+\<!--
+
 ### `before`
 
 The `before` hook allows you to insert an object or array before calling the [target](#hook-arguments) resolver. If `blocking` is set to `true` and a blocking response occurs, other queries will resolve as normal.
@@ -220,6 +217,7 @@ interface AfterHooksTransformObject {
   composer: string;
 }
 ```
+
 --\>
 
 ### `afterAll`
@@ -493,9 +491,9 @@ A composer can be a local function or a remote serverless function. Composer sig
 
 ```ts
 interface HookPayload {
-	context: HookFunctionPayloadContext;
-	// GraphQL document node.
-	document?: DocumentNode;
+ context: HookFunctionPayloadContext;
+ // GraphQL document node.
+ document?: DocumentNode;
 };
 ```
 
@@ -503,11 +501,11 @@ interface HookPayload {
 
 ```ts
 interface BeforeAllHookResponse extends HookResponse {
-	data?: {
-		headers?: {
-			[headerName: string]: string;
-		};
-	};
+ data?: {
+  headers?: {
+   [headerName: string]: string;
+  };
+ };
 }
 ```
 
@@ -616,8 +614,8 @@ async function handleRequest(event) {
 
 ```ts
 interface AfterAllHookPayload extends HookPayload {
-	// GraphQL result to be returned to the client. Includes data, errors, and extensions.
-	result: GraphQLResult;
+ // GraphQL result to be returned to the client. Includes data, errors, and extensions.
+ result: GraphQLResult;
 }
 ```
 
@@ -625,9 +623,9 @@ interface AfterAllHookPayload extends HookPayload {
 
 ```ts
 interface AfterAllHookResponse extends HookResponse {
-	data?: {
-		result?: GraphQLResult;
-	};
+ data?: {
+  result?: GraphQLResult;
+ };
 }
 ```
 
@@ -748,8 +746,8 @@ async function handleRequest(event) {
 
 ```ts
 interface BeforeSourceHookPayload extends SourceHookPayload {
-	// Request init to be used in the source fetch request. Includes body, headers, method.
-	request: RequestInit;
+ // Request init to be used in the source fetch request. Includes body, headers, method.
+ request: RequestInit;
 }
 ```
 
@@ -757,16 +755,16 @@ interface BeforeSourceHookPayload extends SourceHookPayload {
 
 ```ts
 interface BeforeSourceHookResponse extends HookResponse {
-	data?: {
-		request?:
-			| RequestInit
-			| {
-					body?: string | ReadableStream<Uint8Array>;
-					headers?: Record<string, string>;
-					method?: string;
-					url?: string;
-			  };
-	};
+ data?: {
+  request?:
+   | RequestInit
+   | {
+     body?: string | ReadableStream<Uint8Array>;
+     headers?: Record<string, string>;
+     method?: string;
+     url?: string;
+     };
+ };
 }
 ```
 
@@ -851,8 +849,8 @@ async function handleRequest(event) {
 
 ```ts
 interface AfterSourceHookPayload extends SourceHookPayload {
-	// Response from the source fetch request. Includes body, headers, status, statusText.
-	response: Response;
+ // Response from the source fetch request. Includes body, headers, status, statusText.
+ response: Response;
 }
 ```
 
@@ -860,16 +858,16 @@ interface AfterSourceHookPayload extends SourceHookPayload {
 
 ```ts
 interface AfterSourceHookResponse extends HookResponse {
-	data?: {
-		response?:
-			| Response
-			| {
-					body?: string | ReadableStream<Uint8Array>;
-					headers?: Record<string, string>;
-					status?: number;
-					statusText?: string;
-			  };
-	};
+ data?: {
+  response?:
+   | Response
+   | {
+     body?: string | ReadableStream<Uint8Array>;
+     headers?: Record<string, string>;
+     status?: number;
+     statusText?: string;
+     };
+ };
 }
 
 ```
@@ -994,7 +992,7 @@ The following example adds a custom header (`x-md5-hash`) to the request. This c
 
 <CodeBlock slots="heading, code" repeat="2" languages="json, js" />
 
-#### `mesh.json`
+### `mesh.json`
 
 ```json
 {
@@ -1023,7 +1021,7 @@ The following example adds a custom header (`x-md5-hash`) to the request. This c
 }
 ```
 
-#### `handleOnFetch.js`
+### `handleOnFetch.js`
 
 ```js
 async function handleOnFetch(data) {

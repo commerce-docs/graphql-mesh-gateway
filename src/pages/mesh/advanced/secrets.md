@@ -120,13 +120,13 @@ When you create or update a mesh that you want to include secrets in, add the `-
 
 <CodeBlock slots="heading, code" repeat="2" languages="bash, bash" />
 
-#### Create
+### Create
 
 ```bash
 aio api-mesh create mesh.json --secrets secrets.yaml
 ```
 
-#### Update
+### Update
 
 ```bash
 aio api-mesh update mesh.json --secrets secrets.yaml

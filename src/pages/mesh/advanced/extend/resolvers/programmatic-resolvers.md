@@ -68,7 +68,7 @@ Create a JavaScript file named `additional-resolvers.js` in the same directory a
 
 <CodeBlock slots="heading, code" repeat="1" languages="js" />
 
-#### `additional-resolvers.js`
+### `additional-resolvers.js`
 
 ```js
 module.exports = {
@@ -131,7 +131,7 @@ To see a similar programmatic resolver that uses batching and logging, see [Batc
 
 <CodeBlock slots="heading, code" repeat="2" languages="graphql, json" />
 
-#### GraphQL Query
+### GraphQL Query
 
 ```graphql
 {
@@ -151,7 +151,7 @@ To see a similar programmatic resolver that uses batching and logging, see [Batc
 }
 ```
 
-#### Response
+### Response
 
 ```json
 {

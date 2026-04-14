@@ -148,10 +148,10 @@ The following table specifies the GraphQL Mesh versions of each transform suppor
 
 | Transform | Version |
 |------------|------------|
-[encapsulate]( ./encapsulate.md) | `0.4.21`
-[federation](federation.md) | `0.11.14`
-[filterSchema](filter-schema.md) | `0.15.23`
-[namingConvention](naming-convention.md) | `0.13.22`
-[prefix](prefix.md) | `0.12.22`
-[rename](rename.md) | `0.14.22`
-[typeMerging](type-merging.md) | `0.5.20`
+| [encapsulate]( ./encapsulate.md) | `0.4.21` |
+| [federation](federation.md) | `0.11.14` |
+| [filterSchema](filter-schema.md) | `0.15.23` |
+| [namingConvention](naming-convention.md) | `0.13.22` |
+| [prefix](prefix.md) | `0.12.22` |
+| [rename](rename.md) | `0.14.22` |
+| [typeMerging](type-merging.md) | `0.5.20` |
