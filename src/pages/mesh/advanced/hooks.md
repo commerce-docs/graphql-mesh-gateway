@@ -45,10 +45,10 @@ Hooks are plugins that accept the following arguments:
 }
 ```
 
-\<!-- 
+\<!--
 `target` (string) - The target GraphQL node.
 
-    For example, `Query.availableStores` targets [`availableStores`](https://developer.adobe.com/commerce/webapi/graphql/schema/store/queries/available-stores/), which means that if the query calls `availableStores`, then the `composer` will execute.
+  For example, `Query.availableStores` targets [`availableStores`](https://developer.adobe.com/commerce/webapi/graphql/schema/store/queries/available-stores/), which means that if the query calls `availableStores`, then the `composer` will execute.
 --\>
 
 - `composer` (string) - The local or remote file location of the function you want to execute.
