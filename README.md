@@ -1,37 +1,83 @@
 # API Mesh for Adobe Developer App Builder Documentation
 
-Welcome! This site contains the latest API Mesh for Adobe Developer App Builder documentation for ongoing releases.
+This repository is used to store the code for the [API Mesh for Adobe Developer App Builder documentation](https://developer.adobe.com/graphql-mesh-gateway/) website. It is built using the [Adobe Edge Delivery Services](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/edge-delivery/overview) and deployed to [Adobe Developer](https://developer.adobe.com/graphql-mesh-gateway/).
 
-## Local development
+This site contains the latest API Mesh for Adobe Developer App Builder documentation for ongoing releases.
 
-This is a [Gatsby](https://www.gatsbyjs.com/) project that uses the [Adobe I/O Theme](https://github.com/adobe/aio-theme).
+## Contributors
 
-To build the site locally:
+Our goal is to provide the Adobe Developer community with comprehensive and quality technical documentation. We believe that to accomplish that goal we need experts from the community to share their knowledge with us and each other. We are thankful to all of our contributors for improving the documentation.
 
-1. Clone this repository.
-1. Install project dependencies.
+See the [Contribution Guide](https://developer.adobe.com/commerce/contributor/) for details about contributing to Adobe Developer documentation.
+
+## Quick start
+
+For local development, you need to start three servers:
+
+1. **Content server** (your content repo):
 
    ```bash
-   yarn install
+   npm run dev
    ```
 
-1. Launch the project in development mode.
+   This starts the content server on port 3003.
+
+2. **Code server** ([adp-devsite](https://github.com/AdobeDocs/adp-devsite)):
 
    ```bash
-   yarn dev
+   git clone https://github.com/AdobeDocs/adp-devsite
+   cd adp-devsite
+   npm install
+   npm run dev
    ```
 
-## Resources
+3. **Runtime connector** ([devsite-runtime-connector](https://github.com/aemsites/devsite-runtime-connector)):
 
-See the following resources to learn more about using the theme:
+   ```bash
+   git clone https://github.com/aemsites/devsite-runtime-connector
+   cd devsite-runtime-connector
+   npm install
+   npm run dev
+   ```
 
-- [Arranging content structure](https://github.com/adobe/aio-theme#content-structure)
-- [Linking to pages](https://github.com/adobe/aio-theme#links)
-- [Using assets](https://github.com/adobe/aio-theme#assets)
-- [Configuring global navigation](https://github.com/adobe/aio-theme#global-navigation)
-- [Configuring side navigation](https://github.com/adobe/aio-theme#side-navigation)
-- [Using content blocks](https://github.com/adobe/aio-theme#jsx-blocks)
-- [Writing enhanced Markdown](https://github.com/adobe/aio-theme#writing-enhanced-markdown)
-- [Deploying the site](https://github.com/adobe/aio-theme#deploy-to-azure-storage-static-websites) _(Adobe employees only)_
+Once all three servers are running, navigate to `http://localhost:3000/graphql-mesh-gateway/`
+
+For common utilities and documentation, please see the [centralized README](https://github.com/AdobeDocs/adp-devsite-utils/blob/main/README.md).
+
+## Testing and linting
+
+### Markdown linting
+
+To lint your markdown files before pushing, execute:
+
+```bash
+npm run lint:md
+```
+
+To automatically fix linting errors, execute:
+
+```bash
+npm run lint:md:fix
+```
+
+### Content validation
+
+To check internal and external links, validate front matter and more, execute:
+
+```bash
+npm run lint
+```
+
+### TOC validation
+
+To validate the table of contents (TOC) file, execute:
+
+```bash
+npm run test:config
+```
+
+## Comment blocks
+
+HTML comment blocks (`\<!-- ... --\>`) in `.md` files under `src/pages/` document either disabled features or currently unsupported scenarios. They are intentionally left in place for reference and possible future implementation.
 
 If you have questions, open an issue and ask us. We look forward to hearing from you!

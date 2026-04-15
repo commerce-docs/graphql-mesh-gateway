@@ -2,7 +2,6 @@
     - /graphql-mesh-gateway/
 
 - pages:
-    - [Commerce](https://developer.adobe.com/commerce/docs)
     - [Home](/index.md)
     - [API Mesh](/mesh/index.md)
 
