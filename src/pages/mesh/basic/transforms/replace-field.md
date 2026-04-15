@@ -65,6 +65,8 @@ module.exports = {
 } 
 ```
 
+\<!--
+
 ## How the transform works
 
 `from` defines your source, the field in the schema you want to replace.
