@@ -12,7 +12,7 @@ keywords:
 
 # CORS headers
 
-Cross-origin resource sharing (CORS) allows you to pass resources that are usually restricted to an outside domain. Refer to [MDN's documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) for more information on CORS headers.
+Cross-origin resource sharing (CORS) allows you to pass resources that are usually restricted to an outside domain. Refer to [MDN's documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) for more information on CORS headers.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -33,7 +33,7 @@ The following examples show how to use CORS with a single origin or with multipl
 
 <CodeBlock slots="heading, code" repeat="2" languages="json, json" />
 
-#### Single origin
+## Single origin
 
 ```json
 {
@@ -59,7 +59,7 @@ The following examples show how to use CORS with a single origin or with multipl
 }
 ```
 
-#### Multiple origins
+## Multiple origins
 
 ```json
 {

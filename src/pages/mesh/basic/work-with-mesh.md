@@ -136,23 +136,23 @@ The following example includes some additional information a user can receive as
 
 <InlineAlert variant="info" slots="text"/>
 
-When creating a mesh for the first time, you must select the project and workspace that you want to create the mesh in. Alternatively, you can use [aio commands](https://github.com/adobe/aio-cli#commands) to manually select a project or workspace, list the current selections, or remove the currently selected project or workspace from the cache.
+When creating a mesh for the first time, you must select the project and workspace that you want to create the mesh in. Alternatively, you can use [aio commands](https://github.com/adobe/aio-cli) to manually select a project or workspace, list the current selections, or remove the currently selected project or workspace from the cache.
 
 ### View the cached project and workspace
 
-To see your current cache configuration, use the [`aio config:get console`](https://github.com/adobe/aio-cli#aio-configget-key) command, which includes the currently selected organization, project, and workspace.
+To see your current cache configuration, use the [`aio config:get console`](https://github.com/adobe/aio-cli#aio-config-get-key) command, which includes the currently selected organization, project, and workspace.
 
-You can view a list of available projects in your current organization by running the [`aio console:project:list`](https://github.com/adobe/aio-cli-plugin-console#aio-consoleprojectlist) command.
+You can view a list of available projects in your current organization by running the [`aio console:project:list`](https://github.com/adobe/aio-cli#aio-console-project-list) command.
 
-To view a list of available workspaces in the current project, run the [`aio console:workspace:list`](https://github.com/adobe/aio-cli-plugin-console#aio-consoleworkspacelist) command.
+To view a list of available workspaces in the current project, run the [`aio console:workspace:list`](https://github.com/adobe/aio-cli#aio-console-workspace-list) command.
 
 ### Select a project or workspace
 
-By [default](https://developer.adobe.com/app-builder/docs/getting_started/first_app/#2-creating-a-new-project-on-developer-console), projects have a `production` and a `stage` workspace. You can also [create your own workspaces](https://developer.adobe.com/developer-console/docs/guides/projects/projects-template/#add-a-workspace). If you do not know which workspace to use, use the `stage` workspace.
+By [default](https://developer.adobe.com/app-builder/docs/get_started/app_builder_get_started/first-app), projects have a `production` and a `stage` workspace. You can also [create your own workspaces](https://developer.adobe.com/developer-console/docs/guides/projects/projects-template#add-a-workspace). If you do not know which workspace to use, use the `stage` workspace.
 
-To change the selected project, use the [`aio console:project:select`](https://github.com/adobe/aio-cli#aio-consoleprojectselect-projectidorname) command, which prompts you to select your project from a list.
+To change the selected project, use the [`aio console:project:select`](https://github.com/adobe/aio-cli#aio-console-project-select-projectidorname) command, which prompts you to select your project from a list.
 
-To change the selected workspace, use the [`aio console:workspace:select`](https://github.com/adobe/aio-cli#aio-consoleworkspaceselect-workspaceidorname) command, which prompts you to select your workspace from a list.
+To change the selected workspace, use the [`aio console:workspace:select`](https://github.com/adobe/aio-cli#aio-console-workspace-select-workspaceidorname) command, which prompts you to select your workspace from a list.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -160,7 +160,7 @@ You must select a project before you select a workspace.
 
 ### Delete a cached project or workspace
 
-If you want to clear a previously selected project or workspace from your cache, use the [`aio config:delete`](https://github.com/adobe/aio-cli#aio-configdelete-keys) followed by the object you want to remove from your cached config.
+If you want to clear a previously selected project or workspace from your cache, use the [`aio config:delete`](https://github.com/adobe/aio-cli#aio-config-delete-keys) followed by the object you want to remove from your cached config.
 
 For example:
 
@@ -173,7 +173,7 @@ In GraphQL you can use [aliasing](https://graphql.org/learn/queries/#aliases) in
 
 <InlineAlert variant="info" slots="text"/>
 
-You can also rename field names within your mesh by using the [`rename`](./transforms/rename.md) and [`prefix`](./transforms/prefix.md) transforms.
+You can also rename field names within your mesh by using the [`rename`](transforms/rename.md) and [`prefix`](transforms/prefix.md) transforms.
 
 The following example renames the `name` field to `productName`.
 

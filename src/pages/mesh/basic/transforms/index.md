@@ -20,24 +20,24 @@ Transforms are specified as a list of objects, and they are executed in order. Y
 
 API Mesh currently supports the following transforms:
 
--  [Rename](./rename.md)
--  [Prefix](./prefix.md)
--  [Filter Schema](./filter-schema.md)
--  [Replace Field](./replace-field.md)(deprecated)
--  [Type Merging](./type-merging.md)
--  [Naming Convention](./naming-convention.md)
+-  [Rename](rename.md)
+-  [Prefix](prefix.md)
+-  [Filter Schema](filter-schema.md)
+-  [Replace Field](replace-field.md)(deprecated)
+-  [Type Merging](type-merging.md)
+-  [Naming Convention](naming-convention.md)
 -  [Hooks](../../advanced/hooks.md)
 
 Additionally, the following transforms are available but are not fully supported by API Mesh at this time. This means that your mesh will accept the transform, but we have not tested the transform thoroughly, and you could encounter errors. Additionally, certain transform options may be disabled due to security concerns.
 
--  [Encapsulate](./encapsulate.md)
--  [Federation](./federation.md)
+-  [Encapsulate](encapsulate.md)
+-  [Federation](federation.md)
 
 Other transforms are not supported.
 
 ## Handler-level transforms and mesh-level transforms
 
-When adding a transform to your mesh, you can choose to have the transform affect a single source (handler) or the entire mesh. The following examples use [`prefix` transforms](./prefix.md), which are the preferred method of avoiding conflicting object names across multiple schemas.
+When adding a transform to your mesh, you can choose to have the transform affect a single source (handler) or the entire mesh. The following examples use [`prefix` transforms](prefix.md), which are the preferred method of avoiding conflicting object names across multiple schemas.
 
 The following example uses the `prefix` transform to prefix "REST_" to all queries and mutations from the REST source.
 
@@ -148,10 +148,10 @@ The following table specifies the GraphQL Mesh versions of each transform suppor
 
 | Transform | Version |
 |------------|------------|
-[encapsulate]( ./encapsulate.md) | `0.4.21`
-[federation](./federation.md) | `0.11.14`
-[filterSchema](./filter-schema.md) | `0.15.23`
-[namingConvention](./naming-convention.md) | `0.13.22`
-[prefix](./prefix.md) | `0.12.22`
-[rename](./rename.md) | `0.14.22`
-[typeMerging](./type-merging.md) | `0.5.20`
+| [encapsulate]( ./encapsulate.md) | `0.4.21` |
+| [federation](federation.md) | `0.11.14` |
+| [filterSchema](filter-schema.md) | `0.15.23` |
+| [namingConvention](naming-convention.md) | `0.13.22` |
+| [prefix](prefix.md) | `0.12.22` |
+| [rename](rename.md) | `0.14.22` |
+| [typeMerging](type-merging.md) | `0.5.20` |

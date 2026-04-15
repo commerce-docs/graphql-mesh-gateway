@@ -12,7 +12,7 @@ keywords:
 
 # `typeMerging` transform
 
-Type Merging allows you to combine multiple sources by merging a type from each source. For example, you could combine responses from two different APIs on a single field, provided you [rename](./rename.md) the fields you want to stitch to the same name.
+Type Merging allows you to combine multiple sources by merging a type from each source. For example, you could combine responses from two different APIs on a single field, provided you [rename](rename.md) the fields you want to stitch to the same name.
 
 For example, you could combine responses from two different APIs on a single field, provided you rename the fields you want to stitch to the same name.
 
@@ -54,7 +54,7 @@ type AuthorWithBooks {
 }
 ```
 
-If you wanted to rename `AuthorWithBooks` to `Author` using the [`Rename`](/docs/transforms/rename) transform, you would create the following mesh.
+If you wanted to rename `AuthorWithBooks` to `Author` using the [`Rename`](rename.md) transform, you would create the following mesh.
 
 ```json
 [
@@ -359,23 +359,23 @@ And now it batches the requests to the inner sources.
 -  `types` (type: `Array of Object`, required):
    -  `typeName` (type: `String`) - Name of the type (Query by default)
    -  `key` (type: `Object`) - Specifies a base selection set needed to merge the annotated type across subschemas.
-  Analogous to the `selectionSet` setting specified in the [merged type configuration](https://www.graphql-tools.com/docs/stitch-type-merging#basic-example):
+  Analogous to the `selectionSet` setting specified in the [merged type configuration](https://the-guild.dev/graphql/stitching/docs/approaches/type-merging):
       -  `selectionSet` (type: `String`, required)
    -  `canonical` (type: `Boolean`) - Specifies types and fields
-that provide a [canonical definition](https://www.graphql-tools.com/docs/stitch-type-merging#canonical-definitions) to be built into the gateway schema. Useful for selecting preferred characteristics among types and fields that overlap across subschemas. Root fields marked as canonical specify which subschema the field proxies for new queries entering the graph.
+that provide a [canonical definition](https://the-guild.dev/graphql/stitching/docs/approaches/type-merging) to be built into the gateway schema. Useful for selecting preferred characteristics among types and fields that overlap across subschemas. Root fields marked as canonical specify which subschema the field proxies for new queries entering the graph.
    -  `fields` (type: `Array of Object`, required):
       -  `fieldName` (type: `String`, required)
       -  `computed` (type: `Object`) - specifies a selection of fields required from other services to compute the value of this field.
          - These additional fields are only selected when the computed field is requested.
-         - Analogous to the [computed field](https://www.graphql-tools.com/docs/stitch-type-merging#computed-fields) in merged type configuration.
-         - Computed field dependencies must be sent into the sub service using an [object key](https://www.graphql-tools.com/docs/stitch-directives-sdl#object-keys).
+         - Analogous to the [computed field](https://the-guild.dev/graphql/stitching/docs/approaches/type-merging) in merged type configuration.
+         - Computed field dependencies must be sent into the sub service using an [object key](https://the-guild.dev/graphql/stitching/docs/approaches/stitching-directives).
          -  `selectionSet` (type: `String`, required)
 -  `queryFields` (type: `Array of Object`, required) - Denotes a root field used to query a merged type across services.
-The marked field's name is analogous to the `fieldName` setting in [merged type configuration](https://www.graphql-tools.com/docs/stitch-type-merging#basic-example), while the field's arguments and return type are used to infer the merge configuration.
+The marked field's name is analogous to the `fieldName` setting in [merged type configuration](https://the-guild.dev/graphql/stitching/docs/approaches/type-merging), while the field's arguments and return type are used to infer the merge configuration.
 Directive arguments tune the merge behavior:
    -  `queryFieldName` (type: `String`, required)
    -  `keyField` (type: `String`) - Specifies the name of a field to pick off origin objects as the key-value pair. When omitted, a `@key` directive must be included on the return type's definition to be built into an object key.
-https://www.graphql-tools.com/docs/stitch-directives-sdl#object-keys
+https://the-guild.dev/graphql/stitching/docs/approaches/stitching-directives
    -  `keyArg` (type: `String`) - Specifies which field argument receives the merge key. This may be omitted for fields with only one argument where the recipient can be inferred.
    -  `additionalArgs` (type: `String`) - Specifies a string of additional keys and values to apply to other arguments,
 formatted as `\"\"\" arg1: "value", arg2: "value" \"\"\"`.

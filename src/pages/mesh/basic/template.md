@@ -20,13 +20,13 @@ From the [API Mesh template repository](https://github.com/adobe-commerce/api-me
 
 ## Create a project and workspace
 
-In the Adobe Developer Console, create a project and workspace and add the API Mesh API to it. [Create your project and workspace](./work-with-mesh.md#projects-and-workspaces).
+In the Adobe Developer Console, create a project and workspace and add the API Mesh API to it. [Create your project and workspace](work-with-mesh.md#projects-and-workspaces).
 
 ## Configure secrets
 
 In the Developer Console, click the **Download** button in the top-right corner of the Project Overview page.
 
-In your cloned repository, add the following [configuration variables](https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository) from the JSON file.
+In your cloned repository, add the following [configuration variables](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-variables) from the JSON file.
 
 | Variable name in GitHub | Name defined in downloaded JSON |
 | ---------- | ------- |

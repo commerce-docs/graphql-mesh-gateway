@@ -21,8 +21,6 @@ Refer to the following custom resolver examples for more information:
 - [Add a custom field](https://github.com/adobe/adobe-commerce-samples/tree/main/api-mesh/custom-field)
 - [Mock a field](https://github.com/adobe/adobe-commerce-samples/tree/main/api-mesh/mock-response)
 
-[Learn more key differences between Schema Stitching and Apollo Federation](https://product.voxmedia.com/2020/11/2/21494865/to-federate-or-stitch-a-graphql-gateway-revisited)
-
 ## Extending GraphQL Schema with `additionalTypeDefs`
 
 You can add new types or fields to the current unified GraphQL Schema by using the `additionalTypeDefs` configuration field.
@@ -182,7 +180,7 @@ After that `rename`, you would expect the following query to work, but it will f
   }
   ```
 
-For other ways to extend the schema consider using [`additionalResolvers`](./resolvers/programmatic-resolvers.md) or [type merging](../../basic/transforms/type-merging.md).
+For other ways to extend the schema consider using [`additionalResolvers`](resolvers/programmatic-resolvers.md) or [type merging](../../basic/transforms/type-merging.md).
 
 ## Batching requests between sources to prevent an N+1 problem
 

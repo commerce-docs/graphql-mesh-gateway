@@ -12,11 +12,11 @@ keywords:
 
 # Command Reference
 
-API Mesh for Adobe Developer App Builder CLI allows you to manage and modify meshes. This page covers commands exclusive to API Mesh. For authorization and other Adobe I/O Extensible CLI commands, refer to the [Adobe IO CLI command list](https://github.com/adobe/aio-cli#commands). For installation instructions, refer to [Getting Started](../basic/index.md).
+API Mesh for Adobe Developer App Builder CLI allows you to manage and modify meshes. This page covers commands exclusive to API Mesh. For authorization and other Adobe I/O Extensible CLI commands, refer to the [Adobe IO CLI command list](https://github.com/adobe/aio-cli). For installation instructions, refer to [Getting Started](../basic/index.md).
 
 ## aio api-mesh:init
 
-Creates a [local development environment](./developer-tools.md#create-a-local-environment). You only need to run this command if you want to set up a local environment.
+Creates a [local development environment](developer-tools.md#create-a-local-environment). You only need to run this command if you want to set up a local environment.
 
 ### Usage
 
@@ -32,7 +32,7 @@ The following arguments are all optional. If you do not supply them, the termina
 
 `-g` or `--git` is a binary argument that requires `Y` or `N` to determine if you want to use `git` for your local environment.
 
-`-m` or `--packageManager` is a binary argument that requires `npm` or `yarn` to determine which package manager to use for the local environment. (Requires [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) or [`yarn`](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable).)
+`-m` or `--packageManager` is a binary argument that requires `npm` or `yarn` to determine which package manager to use for the local environment. (Requires [`npm`](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) or [`yarn`](https://classic.yarnpkg.com/en/docs/install).)
 
 `--help` provides information on the specified command.
 
@@ -52,7 +52,7 @@ Local workspace created successfully
 
 ## aio api-mesh:run
 
-[Deploys a mesh locally](./developer-tools.md#create-a-local-environment). You only need to run this command if you want to work with your mesh locally for testing. Run `aio api-mesh:init` before running this command.
+[Deploys a mesh locally](developer-tools.md#create-a-local-environment). You only need to run this command if you want to work with your mesh locally for testing. Run `aio api-mesh:init` before running this command.
 
 ### Usage
 
@@ -68,7 +68,7 @@ The following arguments are all optional.
 
 `-s` or `--secrets` allows you to specify the path to secrets file.
 
-`--select` deploys the mesh artifact in the selected workspace without rebuilding it. The select command will not download [secrets](./secrets.md) as artifacts. To use secrets with the `--select` flag, combine it with the `--secrets` flag and provide a local file that contains your secrets.
+`--select` deploys the mesh artifact in the selected workspace without rebuilding it. The select command will not download [secrets](secrets.md) as artifacts. To use secrets with the `--select` flag, combine it with the `--secrets` flag and provide a local file that contains your secrets.
 
   ```bash
   aio api-mesh:run mesh.json --select --secrets secrets.yaml
@@ -88,7 +88,7 @@ The following arguments are all optional.
 
 `--help` provides information on the specified command.
 
-For more information on debugging, see the [`node.js` Inspector documentation.](https://nodejs.org/en/docs/inspector#inspector-clients)
+For more information on debugging, see the [`node.js` Inspector documentation.](https://nodejs.org/en/learn/getting-started/debugging)
 
 #### Example
 
@@ -131,9 +131,9 @@ aio api-mesh:create [FILE] [-i] [-c] [--json] [-e <value>] [-s <value>] [--help]
 
 `--json` outputs the `json` of the created mesh.
 
-`-e` or `--env` allows you to provide an environment variables file. Refer to [developer tools](./developer-tools.md#environment-variables) for more information.
+`-e` or `--env` allows you to provide an environment variables file. Refer to [developer tools](developer-tools.md#environment-variables) for more information.
 
-`--secrets [FILE]` allows you to provide a separate YAML file that defines your [secrets](./secrets.md).
+`--secrets [FILE]` allows you to provide a separate YAML file that defines your [secrets](secrets.md).
 
 `--help` provides information on the specified command.
 
@@ -172,9 +172,9 @@ aio api-mesh:update [FILE] [-i] [-c] [-e <value>] [-s <value>] [--help]
 
 `-c` or `--autoConfirmAction` automatically confirms the mesh update instead of prompting the user to confirm.
 
-`-e` or `--env` allows you to provide an environment variables file. Refer to [developer tools](./developer-tools.md#environment-variables) for more information.
+`-e` or `--env` allows you to provide an environment variables file. Refer to [developer tools](developer-tools.md#environment-variables) for more information.
 
-`-s` or `--secrets [FILE]` allows you to provide a separate YAML file that defines your [secrets](./secrets.md).
+`-s` or `--secrets [FILE]` allows you to provide a separate YAML file that defines your [secrets](secrets.md).
 
 `--help` provides information on the specified command.
 
@@ -198,7 +198,7 @@ Retrieves the current status of your create or update command.
 
 <InlineAlert variant="info" slots="text"/>
 
-If your mesh is taking too long to build, consider using [local development](./developer-tools.md#create-a-local-environment).
+If your mesh is taking too long to build, consider using [local development](developer-tools.md#create-a-local-environment).
 
 ### Example
 
@@ -743,7 +743,7 @@ Expected file size is 500 KB. Confirm mesh_logs.csv download? (y/n)`
 Successfully downloaded the logs to mesh_logs.csv.
 ```
 
-The downloaded file will look similar to [this example](../../_examples/bulk-logs.csv).
+The downloaded file will look similar to [this example](https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/static/examples/bulk-logs.csv).
 
 ## aio api-mesh:cache:purge
 
@@ -781,9 +781,9 @@ Successfully purged cache for mesh <meshId> .
 
 ## aio api-mesh:config
 
-The `config` command allows you to manage the configuration for your mesh. Currently, it is only used for [log forwarding](./logging.md#log-forwarding).
+The `config` command allows you to manage the configuration for your mesh. Currently, it is only used for [log forwarding](logging.md#log-forwarding).
 
-You can use the `log-forwarding errors` subcommand to get a list of [log forwarding errors](./logging.md#get-log-forwarding-errors).
+You can use the `log-forwarding errors` subcommand to get a list of [log forwarding errors](logging.md#get-log-forwarding-errors).
 
 ### Usage
 

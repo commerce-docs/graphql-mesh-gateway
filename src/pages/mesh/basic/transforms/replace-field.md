@@ -22,13 +22,13 @@ Since the `replaceField` transform is deprecated, you can achieve the same funct
 
 <InlineAlert variant="info" slots="text"/>
 
-Custom resolvers can hoist and replace existing fields as long as the field types are the same. If the field types are different, you can [extend](../../advanced/extend/index.md) the type to include a new field and hide the original field using a [`filterSchema` transform](./filter-schema.md).
+Custom resolvers can hoist and replace existing fields as long as the field types are the same. If the field types are different, you can [extend](../../advanced/extend/index.md) the type to include a new field and hide the original field using a [`filterSchema` transform](filter-schema.md).
 
 The following example hoists the Adobe Commerce `name` field from the `ProductInterface` to the `label` field of `ProductImage` by adding the `replace.js` resolver to the mesh configuration.
 
 <CodeBlock slots="heading, code" repeat="2" languages="json, javascript" />
 
-#### `mesh.json`
+### `mesh.json`
 
 ```json
 {
@@ -48,7 +48,7 @@ The following example hoists the Adobe Commerce `name` field from the `ProductIn
 }
 ```
 
-#### `replace.js`
+### `replace.js`
 
 ```javascript
 module.exports = {
@@ -65,7 +65,8 @@ module.exports = {
 } 
 ```
 
-<!-- 
+\<!--
+
 ## How the transform works
 
 `from` defines your source, the field in the schema you want to replace.
@@ -213,4 +214,4 @@ type Author {
       -  `field` (type: `String`, required)
    -  `scope` (type: `String (config | hoistValue)`)
    -  `composer` (type: `Any`)
-   -  `name` (type: `String`) -->
+   -  `name` (type: `String`) --\>

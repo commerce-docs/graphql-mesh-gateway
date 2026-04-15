@@ -30,13 +30,13 @@ To get an OAuth token to enable CI/CD:
 
 1. Navigate to the [Adobe Developer Console](https://developer.adobe.com/console) and select the workspace that contains your mesh.
 
-    ![Workspace Card](../../_images/workspace-card.png)
+    ![Workspace Card](../../images/workspace-card.png)
 
 1. Click the **Add Service** button and select API.
 
 1. From the list of APIs, select the **I/O Management API** under the Adobe Services filter and click **Next**.
 
-    ![IO management API](../../_images/io-management-api.png)
+    ![IO management API](../../images/io-management-api.png)
 
 1. With OAuth Server-to-Server selected, click **Save configured API**.
 
@@ -62,7 +62,7 @@ You will continue to use this repository to make changes to your mesh.
 
 ## 3. Configure your secrets and variables
 
-When developing locally, you can store your variables and secrets in your [environment variables file](../advanced/developer-tools.md#environment-variables). When using GitHub, you will need to use [secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions) and [variables](https://docs.github.com/en/actions/learn-github-actions/variables).
+When developing locally, you can store your variables and secrets in your [environment variables file](../advanced/developer-tools.md#environment-variables). When using GitHub, you will need to use [secrets](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets) and [variables](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-variables).
 
 - Variables are for information that is not sensitive, for example, a variable could determine if you are targeting `stage` or `prod`. Additionally, you can configure variables to carry different values based on the environment you are using.
 
@@ -220,7 +220,7 @@ pull_request:
   branches: [ "main" ]
 ```
 
-For more information see [Events that trigger workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows).
+For more information see [Events that trigger workflows](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows).
 
 ## Bring your own CI/CD
 
@@ -232,6 +232,6 @@ When using your own CI/CD platform, there are two important considerations:
 
 - Security is a key requirement. Any alternative CI/CD workflows should provide a secret management solution to store the credentials required to deploy an App Builder Application against a specific Workspace. You can set these tokens in an `.aio` file or by using system or environment variables.
 
-The [`aio-apps-action`](https://github.com/adobe/aio-apps-action) can be used as a reference for constructing your own pipeline. This CI/CD GitHub Action for automated deploys generates a token for the CLI to avoid login. The Adobe Developer Console documentation provides more information on [generating access tokens programmatically](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation/#generating-access-tokens-programmatically).
+The [`aio-apps-action`](https://github.com/adobe/aio-apps-action) can be used as a reference for constructing your own pipeline. This CI/CD GitHub Action for automated deploys generates a token for the CLI to avoid login. The Adobe Developer Console documentation provides more information on [generating access tokens programmatically](https://developer.adobe.com/developer-console/docs/guides/authentication/ServerToServerAuthentication/implementation#generating-access-tokens-programmatically).
 
 This [App Builder Live demo](https://www.youtube.com/live/lbB2jl2rQZM?feature=share&t=1815) provides a walkthrough of how you might create your own CI/CD pipeline.

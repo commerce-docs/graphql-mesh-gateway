@@ -10,11 +10,9 @@ keywords:
   - Tools
 ---
 
-import ContextLogger from '/src/_includes/context-logger.md'
-
 # Programmatic resolvers
 
-While [Configuration-based (declarative) resolvers](../resolvers/index.md) explains how `additionalResolvers` can shape and augment the unified schema with configuration changes, programmatic resolvers shape the schema programmatically using JavaScript.
+While [Configuration-based (declarative) resolvers](index.md) explains how `additionalResolvers` can shape and augment the unified schema with configuration changes, programmatic resolvers shape the schema programmatically using JavaScript.
 
 You can also use custom resolvers to batch repeated queries and get better response times. For more information, see [Batching](../batching.md).
 
@@ -26,7 +24,7 @@ In this example, we will use `additionalResolvers` to apply a set of discounts t
 
 - The `Venia` handler is a publicly available Adobe Commerce GraphQL endpoint for the Venia sample storefront.
 
-- The `DiscountsAPI` handler points to [a `.json` file](https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/src/pages/_examples/discounts-api.json) that contains key-value pairs of sample item names and their corresponding discount percentages.
+- The `DiscountsAPI` handler points to [a `.json` file](https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/static/examples/discounts-api.json) that contains key-value pairs of sample item names and their corresponding discount percentages.
 
 ```json
 {
@@ -45,14 +43,14 @@ In this example, we will use `additionalResolvers` to apply a set of discounts t
         "name": "DiscountsAPI",
         "handler": {
           "JsonSchema": {
-            "baseUrl": "https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/src/pages/_examples",
+            "baseUrl": "https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/refs/heads/main/static/examples",
             "operations": [
               {
                 "type": "Query",
                 "field": "discounts",
                 "path": "/discounts-api.json",
                 "method": "GET",
-                "responseSample": "https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/src/pages/_examples/discounts-api.json"
+                "responseSample": "https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/static/examples/discounts-api.json"
               }
             ]
           }
@@ -70,7 +68,7 @@ Create a JavaScript file named `additional-resolvers.js` in the same directory a
 
 <CodeBlock slots="heading, code" repeat="1" languages="js" />
 
-#### `additional-resolvers.js`
+### `additional-resolvers.js`
 
 ```js
 module.exports = {
@@ -115,7 +113,7 @@ module.exports = {
 };
 ```
 
-This `javascript` file targets the `special_price` field on `ConfigurableProduct` that uses the `maximum_price` for a product and then applies the discount listed for that product in the [`discountsapi.json` file](https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/src/pages/_examples/discounts-api.json). The following arguments define how the `custom resolver` interacts with your mesh:
+This `javascript` file targets the `special_price` field on `ConfigurableProduct` that uses the `maximum_price` for a product and then applies the discount listed for that product in the [`discountsapi.json` file](https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/static/examples/discounts-api.json). The following arguments define how the `custom resolver` interacts with your mesh:
 
 - `special_price` - the name of the field we are adding a custom resolver to
 
@@ -133,7 +131,7 @@ To see a similar programmatic resolver that uses batching and logging, see [Batc
 
 <CodeBlock slots="heading, code" repeat="2" languages="graphql, json" />
 
-#### GraphQL Query
+### GraphQL Query
 
 ```graphql
 {
@@ -153,7 +151,7 @@ To see a similar programmatic resolver that uses batching and logging, see [Batc
 }
 ```
 
-#### Response
+### Response
 
 ```json
 {
@@ -281,7 +279,7 @@ module.exports = {
 
           return globalThis
             .fetch(
-              "raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/src/pages/_examples/discounts-api.json"
+              "https://raw.githubusercontent.com/AdobeDocs/graphql-mesh-gateway/main/static/examples/discounts-api.json"
             )
             .then((response) => {
               if (response) {
@@ -316,9 +314,9 @@ module.exports = {
 
 <InlineAlert variant="info" slots="text"/>
 
-`context.logger` is available in both [declarative](./index.md) and programmatic resolvers.
+`context.logger` is available in both [declarative](index.md) and programmatic resolvers.
 
-<ContextLogger />
+<Fragment src="../../../../context-logger.md"/>
 
 ### Example
 

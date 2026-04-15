@@ -30,7 +30,7 @@ By default, the requests display in YAML.
 
 The rayID is a unique identifier that is associated with every request made through an edge mesh. After finding the relevant rayID, use the `aio api-mesh:log-get` command to retrieve the logs for that rayID.
 
-For more information see [`aio api-mesh:log-list`](./index.md#aio-api-meshlog-list).
+For more information see [`aio api-mesh:log-list`](index.md#aio-api-meshlog-list).
 
 ## Display a single log by rayID
 
@@ -40,7 +40,7 @@ After finding the desired rayID with the [`aio api-mesh:log-list`](#display-rece
 aio api-mesh:log-get 1a123456789abcd0
 ```
 
-For more information see [`aio api-mesh:log-get`](./index.md#aio-api-meshlog-get).
+For more information see [`aio api-mesh:log-get`](index.md#aio-api-meshlog-get).
 
 ## Export bulk logs
 
@@ -52,7 +52,7 @@ aio api-mesh:log-get-bulk --startTime 2024-08-27T21:31:39Z --endTime 2024-08-27T
 
 The time format is `YYYY-MM-DDTHH:MM:SSZ`. You must convert your local time to UTC.
 
-For more information see [`aio api-mesh:log-get-bulk`](./index.md#aio-api-meshlog-get-bulk).
+For more information see [`aio api-mesh:log-get-bulk`](index.md#aio-api-meshlog-get-bulk).
 
 ### Export bulk logs with a relative time range
 
@@ -133,13 +133,13 @@ The [example dashboard](#example-dashboard) displays: request count, request met
 
 <CodeBlock slots="heading, code" repeat="2" languages="graphql, json" />
 
-#### Query mesh logs
+### Query mesh logs
 
 ```sql
 SELECT `Exceptions`, `Logs` as Logs, `RayID` as RayId, `Request.Method`, `Request.URL`, `Response.Status`, `ScriptTags`, `meshId` as meshId, logtype FROM Log SINCE 7 days ago ORDER by timestamp DESC LIMIT MAX WHERE meshId = '' AND ('' = '' OR RayID = '') and logtype = 'mesh_logs'
 ```
 
-#### Query access logs
+### Query access logs
 
 ```sql
 FROM Log SELECT ClientIP AS 'Client IP', RayID, ClientDeviceType AS 'Device', ClientRequestMethod AS 'Method', ClientRequestURI AS 'URI', EdgeColoCode AS 'Edge', EdgeServerIP AS 'Edge IP', ClientRequestSource AS 'Request Source', CacheCacheStatus AS 'Cache Status', EdgeResponseStatus AS 'Response Status', EdgeResponseBytes AS 'Response Bytes', EdgeResponseContentType AS 'Content Type', OriginResponseStatus AS 'Origin Response', OriginIP, WorkerCPUTime, WorkerWallTimeUs WHERE CacheCacheStatus IS NOT NULL AND ClientRequestSource != 'edgeWorkerCacheAPI' AND ('' = '' OR RayID = '') and meshId = '' and logtype = 'access_logs'

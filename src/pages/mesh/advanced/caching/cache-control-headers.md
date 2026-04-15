@@ -19,7 +19,7 @@ When a browser, `fetch` request, or CDN request accesses a URL, the site's respo
 cache-control: max-age=3600
 ```
 
-A `max-age` value of `3600` means that this site wants to serve [fresh](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) data for `3600` seconds (1 hour) after generating the response. After `3600` seconds, the data is considered stale and the browser must request a new response from the server.
+A `max-age` value of `3600` means that this site wants to serve [fresh](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) data for `3600` seconds (1 hour) after generating the response. After `3600` seconds, the data is considered stale and the browser must request a new response from the server.
 
 Alternatively, a site could have the following response header:
 
@@ -27,9 +27,9 @@ Alternatively, a site could have the following response header:
 cache-control: max-age=0
 ```
 
-The `max-age=0` cache-control directive means that this site wants to serve [fresh](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching#fresh_and_stale_based_on_age) data until `0` seconds after generating the response, which means it never wants to cache data. You can also achieve this with a `no-store` directive.
+The `max-age=0` cache-control directive means that this site wants to serve [fresh](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Caching) data until `0` seconds after generating the response, which means it never wants to cache data. You can also achieve this with a `no-store` directive.
 
-For more information on specific cache-control directives and how to use them, see the [Mozilla Developer Network's cache control guide](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control).
+For more information on specific cache-control directives and how to use them, see the [Mozilla Developer Network's cache control guide](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control).
 
 ## Response headers
 
@@ -37,7 +37,7 @@ You can control how caching works by modifying the directives within the `cache-
 
 ### Resolving conflicts between sources
 
-When cache-control header values from multiple sources conflict, API Mesh selects the lowest and most restrictive value. The following section explains which values are returned when [cache-control directives](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) conflict.
+When cache-control header values from multiple sources conflict, API Mesh selects the lowest and most restrictive value. The following section explains which values are returned when [cache-control directives](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Cache-Control) conflict.
 
 If no sources in the query return a `cache-control` header, then caching is skipped.
 
@@ -81,7 +81,7 @@ If your source's cache-control headers contain any of the following directives, 
 
 - `must-understand`
 
-**Examples**
+#### Examples
 
 The following example scenarios indicate the resulting `Response header` from two conflicting sources:
 

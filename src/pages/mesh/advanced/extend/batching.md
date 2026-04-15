@@ -24,13 +24,13 @@ The following graphics depict the difference between queries with batched and un
 
 If your sources do not support batching, each query runs separately.
 
-![unbatched](../../../_images/unbatched.png)
+![unbatched](../../../images/unbatched.png)
 
 ## Batched
 
 If your sources support batching, and you batch with [declarative](#batching-with-declarative-resolvers) or [programmatic resolvers](#batching-with-programmatic-resolvers), multiple queries combine to form a single request.
 
-![batched](../../../_images/batched.png)
+![batched](../../../images/batched.png)
 
 ## The `n+1` problem
 
@@ -87,7 +87,7 @@ Consider a scenario where you are using the following mesh, where the `Reviews` 
 
 Use `"includeHTTPDetails": true` to see response details that indicate how many calls your mesh made to each source.
 
-The [custom resolver](../extend/index.md) extends the type `ConfigurableProduct` with a new `customer_reviews` field, which allows nesting review fields inside of queries against the Venia source. The resolver is composed of the following components:
+The [custom resolver](index.md) extends the type `ConfigurableProduct` with a new `customer_reviews` field, which allows nesting review fields inside of queries against the Venia source. The resolver is composed of the following components:
 
 - The target (`targetTypeName`, `targetFieldName`) - describes the queried field.
 - The source (`sourceName`, `sourceTypeName`, `sourceFieldName`) - describes where the data is resolved for the target field.
@@ -124,7 +124,7 @@ The following query causes multiple calls to the Reviews API:
 
 ## Batching with declarative resolvers
 
-The following example explains how to use batching inside your mesh configuration file by using [declarative resolvers](./resolvers/index.md).
+The following example explains how to use batching inside your mesh configuration file by using [declarative resolvers](resolvers/index.md).
 
 The `Reviews` source takes an array of product SKUs and returns an array of reviews for each SKU. To make a single network request to the `Reviews` source for multiple SKUs, add `keysArg` and `keyField` to your mesh.
 
@@ -182,7 +182,7 @@ With the updated mesh, using the [previous query](#example-without-batching) ret
 
 ## Batching with programmatic resolvers
 
-The following example explains how to use batching inside your mesh configuration file by using [programmatic resolvers](./resolvers/programmatic-resolvers.md).
+The following example explains how to use batching inside your mesh configuration file by using [programmatic resolvers](resolvers/programmatic-resolvers.md).
 
 In the following example, `args.skus` creates an array of SKUs to query instead of querying each SKU individually. The `valuesFromResults` object is optional and allows you to filter, sort, and transform your results.
 
@@ -190,11 +190,11 @@ In the following example, you would create your mesh configuration file (`mesh.j
 
 <InlineAlert variant="info" slots="text"/>
 
-The `resolvers.js` file contains similar logic to the `additionalResolvers.js` file in [Programmatic Resolvers](./resolvers/programmatic-resolvers.md#additional-resolversjs), but adds batching and logging.
+The `resolvers.js` file contains similar logic to the `additionalResolvers.js` file in [Programmatic Resolvers](resolvers/programmatic-resolvers.md#additional-resolversjs), but adds batching and logging.
 
 <CodeBlock slots="heading, code" repeat="3" languages="json, javascript, graphql" />
 
-#### `mesh.json`
+### `mesh.json`
 
 ```json
 {
@@ -237,7 +237,7 @@ The `resolvers.js` file contains similar logic to the `additionalResolvers.js` f
 }
 ```
 
-#### `resolver.js`
+### `resolver.js`
 
 ```javascript
 module.exports = {
@@ -283,7 +283,7 @@ module.exports = {
 };
 ```
 
-#### Sample query
+### Sample query
 
 ```graphql
 {

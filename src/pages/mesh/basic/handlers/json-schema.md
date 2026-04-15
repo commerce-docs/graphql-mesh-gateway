@@ -43,11 +43,11 @@ The `JsonSchema` source uses a different capitalization scheme than other handle
 }
 ```
 
-If your REST service's request or response format is modified, you must update your mesh configuration file with the modified request or response. Then [update your mesh](../../basic/create-mesh.md#update-an-existing-mesh) to allow API Mesh to cache any changes.
+If your REST service's request or response format is modified, you must update your mesh configuration file with the modified request or response. Then [update your mesh](../create-mesh.md#update-an-existing-mesh) to allow API Mesh to cache any changes.
 
-If your source handler's schema is modified, you must [update your mesh](../../basic/create-mesh.md#update-an-existing-mesh) to allow API Mesh to cache any changes.
+If your source handler's schema is modified, you must [update your mesh](../create-mesh.md#update-an-existing-mesh) to allow API Mesh to cache any changes.
 
-For more information on creating JSON schemas, refer to this [JSON schema tutorial](https://json-schema.org/learn/getting-started-step-by-step.html).
+For more information on creating JSON schemas, refer to this [JSON schema tutorial](https://json-schema.org/learn/getting-started-step-by-step).
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -79,7 +79,7 @@ The JSON Schema handler uses the following format:
 }
 ```
 
-JSON Schema handlers can also use local sources, see [Reference local file handlers](./index.md#reference-local-files-in-handlers) for more information.
+JSON Schema handlers can also use local sources, see [Reference local file handlers](index.md#reference-local-files-in-handlers) for more information.
 
 The following example returns your header values, so you can confirm your headers are functioning properly.
 
@@ -142,7 +142,7 @@ The following example returns your header values, so you can confirm your header
 }
 ```
 
-<!-- And for `mesh dev` or `mesh start`, you can pass the value using `x-my-graphql-api-token` HTTP header.
+\<!-- And for `mesh dev` or `mesh start`, you can pass the value using `x-my-graphql-api-token` HTTP header.
 
 ### From Environment Variable
 
@@ -230,7 +230,7 @@ By declaring the `responseSample`, you can use the JSON sample in the GraphQL sc
 ```
 
 For your `./jsons/MyField.response.json` file, any JSON file can be used.
-``` -->
+--\>
 
 ## Query Parameters
 
@@ -333,7 +333,27 @@ Here we add the `page` argument to the query parameters:
 }
 ```
 
-<!-- ### Global arguments
+## Config API reference
+
+-  `operationHeaders` (type: `JSON`) - JSON object for adding headers to API calls for runtime operation execution
+-  `operations` - (required) Array of:
+    -  `object`:
+        -  `field` (type: `String`, required)
+            -  Cannot contain hyphens.
+        -  `description` (type: `String`)
+        -  `type` (type: `String (Query | Mutation | Subscription)`, required)
+        -  `requestSchema` (type: `Any`)
+        -  `requestSample` (type: `Any`)
+        -  `requestTypeName` (type: `String`)
+        -  `responseSchema` (type: `Any`)
+            -  Remote files and URLs are not supported. You must provide a local path.
+        -  `responseSample` (type: `Any`)
+            -  Remote files and URLs are not supported. You must provide a local path.
+        -  `responseTypeName` (type: `String`)
+        -  `argTypeMap` (type: `JSON`)
+-  `ignoreErrorResponses` (type: `Boolean`) - Flag for ignoring errors in the response
+
+\<!-- ### Global arguments
 
 Query arguments could be defined globally, on the handler level, so they are added to all operations.
 
@@ -362,29 +382,9 @@ In this example, we declare the `limit` parameter with a default value of `10` a
 
 <InlineAlert variant="info" slots="text"/>
 
-`queryParams` are automatically added to the query. If the argument is defined both on the handler AND operation level, the operation level argument will be used. -->
-## Config API reference
+`queryParams` are automatically added to the query. If the argument is defined both on the handler AND operation level, the operation level argument will be used. --\>
 
--  `baseUrl` (type: `String`) - URL or file path for your JSON schema.
--  `schemaHeaders` (type: `JSON`) - JSON object for adding headers to API calls for runtime schema introspection
--  `operationHeaders` (type: `JSON`) - JSON object for adding headers to API calls for runtime operation execution
--  `operations` - (required) Array of:
-   -  `object`:
-      -  `field` (type: `String`, required)
-         -  Cannot contain hyphens.
-      -  `description` (type: `String`)
-      -  `type` (type: `String (Query | Mutation | Subscription)`, required)
-      -  `requestSchema` (type: `Any`)
-      -  `requestSample` (type: `Any`)
-      -  `requestTypeName` (type: `String`)
-      -  `responseSchema` (type: `Any`)
-         -  Remote files and URLs are not supported. You must provide a local path.
-      -  `responseSample` (type: `Any`)
-         -  Remote files and URLs are not supported. You must provide a local path.
-      -  `responseTypeName` (type: `String`)
-      -  `argTypeMap` (type: `JSON`)
--  `ignoreErrorResponses` (type: `Boolean`) - Flag for ignoring errors in the response
-<!--   
+\<!--
 `path` (type: `String`, required)
 `method` (type: `String (GET | HEAD | POST | PUT | DELETE | CONNECT | OPTIONS | TRACE | PATCH)`)
 `headers` (type: `JSON`)
@@ -403,5 +403,5 @@ unless you define an explicit Content-Type header
     `responseSample` (type: `Any`)
     `responseTypeName` (type: `String`)
     `argTypeMap` (type: `JSON`)
-    `pubsubTopic` (type: `String`, required) 
--->
+    `pubsubTopic` (type: `String`, required)
+--\>

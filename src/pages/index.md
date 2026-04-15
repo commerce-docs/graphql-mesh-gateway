@@ -10,13 +10,11 @@ keywords:
   - Tools
 ---
 
-import UpdateNotice from '/src/_includes/update-notice.md'
+<Fragment src="includes/update-notice.md"/>
 
-<UpdateNotice />
+<Superhero slots="image, heading, text"/>
 
-<Hero slots="image, heading, text"/>
-
-![API Mesh](_images/home-bg.jpeg)
+![API Mesh](images/home-bg.jpeg)
 
 # API Mesh for Adobe Developer App Builder
 
@@ -34,7 +32,7 @@ By serving multiple sources through a single gateway and providing customized re
 -  **Extensibility** - Customize and extend your APIs directly in the gateway without making changes to the API source
 -  **Advanced Security** - Web application firewall (WAF) and distributed denial-of-service (DDoS) protection for all your APIs
 
-![api mesh diagram](./_images/api-mesh-diagram.png)
+![api mesh diagram](./images/api-mesh-diagram.png)
 
 ### Related information
 
@@ -48,7 +46,7 @@ Allows developers to integrate private and third-party APIs and other software i
 
 <DiscoverBlock slots="link, text"/>
 
-[App Builder](https://developer.adobe.com/app-builder/docs/overview/)
+[App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/)
 
 Is a complete framework that enables enterprise developers to build and deploy custom web applications that extend Adobe Experience Cloud solutions and run on Adobe infrastructure.
 

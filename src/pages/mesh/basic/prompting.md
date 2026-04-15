@@ -22,12 +22,12 @@ These resources can help developers quickly build, test, and deploy meshes by le
 
 The following files are used when prompting your agent to create a mesh. You can review the contents of these files for a better understanding the context provided to the agent. You can also customize these files to address your specific mesh generation needs.
 
-- [`llm.txt`](https://github.com/adobe-commerce/api-mesh-starter-kit/blob/main/llm.txt) - Source context and knowledge base for API Mesh
+- [`llm.txt`](https://raw.githubusercontent.com/adobe-commerce/api-mesh-starter-kit/refs/heads/main/llm.txt) - Source context and knowledge base for API Mesh
 - [`.cursor/rules/api-mesh.mdc`](https://github.com/adobe-commerce/api-mesh-starter-kit/blob/main/.cursor/rules/api-mesh.mdc) - Active Cursor AI rules for this project
 
 <InlineAlert variant="help" slots="text"/>
 
-The API Mesh starter kit also allows you to [create a mesh from a template](./template.md).
+The API Mesh starter kit also allows you to [create a mesh from a template](template.md).
 
 ## Prerequisites
 

@@ -10,9 +10,7 @@ keywords:
   - Tools
 ---
 
-import UpdateNotice from '/src/_includes/update-notice.md'
-
-<UpdateNotice />
+<Fragment src="../../includes/update-notice.md"/>
 
 # Release notes
 
@@ -83,7 +81,7 @@ This release contains the following changes to API Mesh:
 
 ### Bug fixes
 
-- Resolved an issue that could prevent retrieving logs in the CLI. <!-- CEXT-5292 -->
+- Resolved an issue that could prevent retrieving logs in the CLI. \<!-- CEXT-5292 --\>
 
 ## September 18, 2025
 
@@ -119,7 +117,7 @@ This release contains the following changes to API Mesh:
 
 ### Troubleshooting
 
-If you encounter the following error, refer to [Troubleshooting](../release/update.md#troubleshooting) for a solution.
+If you encounter the following error, refer to [Troubleshooting](update.md#troubleshooting) for a solution.
 
 ```terminal
 Mesh TypeError: Cache is not a constructor
@@ -232,7 +230,7 @@ This release contains the following changes to API Mesh:
 
 ### Bug fixes
 
-- Resolved an encoding issue that could cause problems when interacting with a mesh. [Update your CLI to the latest version](./upgrade.md#software-updates), if you experience similar issues.
+- Resolved an encoding issue that could cause problems when interacting with a mesh. [Update your CLI to the latest version](upgrade.md#software-updates), if you experience similar issues.
 - Resolved an issue that prevented certain `additionalResolvers` from functioning correctly when using [local development](../advanced/developer-tools.md).
 
 ## March 03, 2025

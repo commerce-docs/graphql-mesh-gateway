@@ -1,5 +1,5 @@
 
-After [creating a local environment](https://developer.adobe.com/graphql-mesh-gateway/mesh/advanced/developer-tools/#create-a-local-environment), you can enable scheduled performance testing in GitHub.
+After [creating a local environment](../mesh/advanced/developer-tools.md#create-a-local-environment), you can enable scheduled performance testing in GitHub.
 
 <InlineAlert variant="info" slots="text"/>
 
@@ -20,7 +20,7 @@ To add variables, you must have administrative permissions in the target GitHub 
    - `UPLOAD_REPORT` - Boolean to control uploading the report to your GitHub repository.
    - `MESH_ENDPOINT` - The URL of your edge mesh.
 
-1. You can run the action manually from the **Actions** tab in your GitHub repository, or you can [use a schedule event](https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#schedule).
+1. You can run the action manually from the **Actions** tab in your GitHub repository, or you can [use a schedule event](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows).
 
 ### Local performance testing
 
