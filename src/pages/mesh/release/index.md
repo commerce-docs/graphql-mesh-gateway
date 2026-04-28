@@ -34,6 +34,14 @@ aio plugins:uninstall @adobe/aio-cli-plugin-api-mesh
 aio plugins install @adobe/aio-cli-plugin-api-mesh
 ```
 
+## April 28, 2026
+
+This release contains the following changes to API Mesh:
+
+### Bug fixes
+
+- Resolved an issue in local development environments that occurred when a secret's value is a JSON object string, using `{context.secrets.TOKEN}` directly in `operationHeaders` would not resolve correctly.
+
 ## March 30, 2026
 
 This release contains the following changes to API Mesh:
