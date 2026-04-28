@@ -40,7 +40,7 @@ This release contains the following changes to API Mesh:
 
 ### Bug fixes
 
-- Resolved an issue in local development environments that occurred when a secret's value is a JSON object string, using `{context.secrets.TOKEN}` directly in `operationHeaders` would not resolve correctly.
+- **Local Secrets Now Support JSON-Encoded Values** - The local `aio api-mesh run` command now properly handles JSON-encoded secret values in the same way the deployed tenant worker does.
 
 ## March 30, 2026
 
