@@ -34,6 +34,14 @@ aio plugins:uninstall @adobe/aio-cli-plugin-api-mesh
 aio plugins install @adobe/aio-cli-plugin-api-mesh
 ```
 
+## April 28, 2026
+
+This release contains the following changes to API Mesh:
+
+### Bug fixes
+
+- **Local Secrets Now Support JSON-Encoded Values** - The local `aio api-mesh run` command now properly handles JSON-encoded secret values in the same way the deployed tenant worker does.
+
 ## March 30, 2026
 
 This release contains the following changes to API Mesh:
